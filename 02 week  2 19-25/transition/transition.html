@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            /* margin-bottom: 20px; */
+        }
+
+        /* adding transition
+            all, backgroundcolor
+            ease,ease-in,ease-out;ease-in-out,linear,cunic-bezier(20%)
+        
+        */
+        .ease{
+            transition:all .5s ease; 
+              transition:background-color 2s ease; 
+                transition:width  1s ease-in; 
+
+        }
+
+        .box:hover{
+            width: 150px;
+            height: 150px;
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box ease">Ease timimg Function</div>
+
+</body>
+</html>

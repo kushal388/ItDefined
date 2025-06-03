@@ -1,0 +1,287 @@
+grid : 3 dimenional , 2 dimenional , both simultaneously ,stacked up
+
+✅ CSS Grid – Interview Definitions
+
+🔹 Grid Container Properties (used on parent)
+display: grid / inline-grid
+Turns an element into a grid container, enabling grid layout on its children.
+
+grid-template-columns
+Defines the number and width of columns in the grid.
+Example: grid-template-columns: 1fr 2fr 100px;
+
+grid-template-rows
+Defines the number and height of rows in the grid.
+
+grid-template-areas
+Defines named areas in the grid layout, making it easier to place items using names.
+
+grid-template
+Shorthand for grid-template-rows, grid-template-columns, and grid-template-areas.
+
+grid-auto-rows
+Sets the default row height for rows created automatically.
+
+grid-auto-columns
+Sets the default column width for columns created automatically.
+
+grid-auto-flow
+Controls the direction in which auto-placed items flow.
+Values: row, column, row dense, column dense
+
+gap, row-gap, column-gap
+Defines the spacing between rows and columns in the grid.
+
+justify-items
+Aligns items horizontally within their grid cell.
+Values: start, end, center, stretch
+
+align-items
+Aligns items vertically within their grid cell.
+Values: same as justify-items
+
+justify-content
+Aligns the entire grid horizontally inside the container.
+
+align-content
+Aligns the entire grid vertically inside the container.
+
+==========================================================================================
+🔹 Grid Item Properties (used on children)
+grid-column-start / grid-column-end
+Define the start and end lines for the item's column placement.
+
+grid-row-start / grid-row-end
+Define the start and end lines for the item's row placement.
+
+grid-column
+Shorthand for grid-column-start / grid-column-end.
+Example: grid-column: 1 / 3;
+
+grid-row
+Shorthand for grid-row-start / grid-row-end.
+
+grid-area
+Either assigns the item to a named area or sets row/column start and end in one line.
+Example: grid-area: header; or grid-area: 1 / 2 / 3 / 4;
+
+justify-self
+Aligns a grid item horizontally within its cell, overriding justify-items.
+
+align-self
+Aligns a grid item vertically within its cell, overriding align-items.
+
+
+
+
+-----------------------------------------------------------------------------------
+🔹 Grid Container Properties (used on the parent)
+
+| **Property**                     | **Description**                                                                           |
+| -------------------------------- | ----------------------------------------------------------------------------------------- |
+| `display: grid / inline-grid`    | Turns an element into a grid container.                                                   |
+| `grid-template-columns`          | Defines number and width of columns. Example: `1fr 2fr 100px`                             |
+| `grid-template-rows`             | Defines number and height of rows.                                                        |
+| `grid-template-areas`            | Defines named areas for easy item placement.                                              |
+| `grid-template`                  | Shorthand for template rows, columns, and areas.                                          |
+| `grid-auto-rows`                 | Sets default height for automatically created rows.                                       |
+| `grid-auto-columns`              | Sets default width for automatically created columns.                                     |
+| `grid-auto-flow`                 | Controls item placement direction. Values: `row`, `column`, `row dense`, etc.             |
+| `gap` / `row-gap` / `column-gap` | Defines space between rows and columns.                                                   |
+| `justify-items`                  | Aligns items **horizontally** in their cells. Values: `start`, `end`, `center`, `stretch` |
+| `align-items`                    | Aligns items **vertically** in their cells. Same values as `justify-items`                |
+| `justify-content`                | Aligns the **entire grid** horizontally inside the container.                             |
+| `align-content`                  | Aligns the **entire grid** vertically inside the container.                               |
+
+-----------------------------------------------------------------------------------------------------------------
+
+
+Grid Item Properties (used on the children)
+
+
+| **Property**                            | **Description**                                                                              |
+| --------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `grid-column-start` / `grid-column-end` | Defines start and end lines for item’s column position.                                      |
+| `grid-row-start` / `grid-row-end`       | Defines start and end lines for item’s row position.                                         |
+| `grid-column`                           | Shorthand: `grid-column-start / grid-column-end`. Example: `1 / 3`                           |
+| `grid-row`                              | Shorthand: `grid-row-start / grid-row-end`.                                                  |
+| `grid-area`                             | Assigns to a named area or defines start/end positions. Example: `header` or `1 / 2 / 3 / 4` |
+| `justify-self`                          | Aligns the item **horizontally** inside its cell. Overrides `justify-items`.                 |
+| `align-self`                            | Aligns the item **vertically** inside its cell. Overrides `align-items`.                     |
+
+
+==================================================================================
+2) to no of rows and column:
+
+     grid-template-rows: 100px 100px 100px 100px 100px 100px ;
+    grid-template-columns:100px 100px 100px 100px 100px 100px;
+
+
+    have 6 roes and column with same length
+
+3) to give individual size:
+        
+    .item-1{
+                grid-row-start: 1;
+                grid-row-end: 3;
+                grid-column-start: 1;
+                grid-column-end: 5;
+            }
+
+
+
+   ===> another way :
+
+        grid-row: starting/ ending
+        grid-column:starting / ending
+
+        eg: .item-1{
+                grid-row: 1 / 4;
+                grid-column:1/4;
+
+                }
+
+
+   ===> easier way: bu using span
+
+            eg: .item-3{
+                        grid-row: span 3;
+                        grid-column: span 3;
+                    }
+
+
+            ==> it will start where ever the positoned earlir based on value it moven up
+
+
+            it doesn't allow to define starting and ending position so our will be pushed away 
+
+
+
+    ===> anothe easier way by using grid-area
+
+        syntax: grid-area : row-start  col-start row-end col-end
+
+
+3) to Stack up on one another
+
+        we can z index value higher to visible on which ever we wanted at top!!!
+
+4) if we add extra div or something more other than we defined at templete row and column :
+
+       dispite having any room left  ==> implicit grid
+       and it may be added by row default 
+       and it may have diffrent size comapre to other ...
+
+
+       so we can add :
+       grif-auto-rows:100px;
+
+
+       or if we need it to be adden in column:
+       grid-auto-flow:column
+
+5) we can give fr also
+  
+
+     
+    fr  ==> fractional value  of availble space
+
+    grid-template-rows: 100px 100px 100px  ;
+    grid-template-columns: :1fr 1fr 1fr
+
+    it can have mixed: too like eg: grid-template-columns: :1px 1fr 1fr
+
+6)repeat 
+
+
+     grid-template-rows: repeat(2 100px); 
+
+     it means 2 time 100px;
+
+7) grid-gap: 
+
+
+     grid-gap :1em;
+     ==> both rows and colum
+
+     grid-gap: 1em 3 em
+     ==>  first value row  second value column
+
+
+8) 
+        positionong in track
+        doesn't require keeping track 
+
+        .container{
+                display: grid;
+                grid-template-rows: 100px 300px 100px;
+                grid-template-columns: 1fr 3fr 1fr;
+            }
+
+
+9) to naming area:
+        /* to name */
+            /* .container{
+                display: grid;
+                grid-template-rows: 100px 300px 100px;
+                grid-template-columns: 1fr 3fr ;
+                grid-template-areas: 
+                    'header header'
+                    'main aside'
+                    'footer footer';
+
+            }
+
+
+            .item-1{
+                grid-area :header;
+            }
+
+            .item-2{
+                grid-area :main;
+            }
+            .item-3{
+                grid-area :aside;
+            }
+
+            .item-4{
+                grid-area :footer;
+            } */
+        
+10)  Default value of streach
+
+
+        justify-items:strech;
+        align-items:streach
+
+
+
+        eg:
+
+            .container{
+                display: grid;
+                grid-template-rows: repeat(4,100px);
+                grid-template-columns: repeat(4, 1fr);
+                justify-items:start;
+                align-items: end;
+
+            }
+
+        ====> for individual
+
+            .item-1{
+                justify-self: center;
+                align-self: stretch ;
+            }
+
+
+11) to make responsive without using media query
+
+        .container{
+            display: grid;
+            grid-template-rows: repeat(4, 100px);
+            /* grid-template-columns: repeat(4 ,minmax(100px,1fr)); */
+            grid-template-columns: repeat(auto-fit ,minmax(100px,1fr));
+
+
+        }

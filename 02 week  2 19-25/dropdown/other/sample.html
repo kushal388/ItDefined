@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .dropdown-menu{
+            position: relative;
+            display:inline-block;
+
+        }
+        .dropdown-content{
+            display: none;
+            position:absolute;
+            background-color: beige;
+        }
+        .dropdown-menu:active .dropdown-content{
+            display:block;
+        }
+    </style>
+
+
+
+</head>
+<body>
+    <h3>Hoverable drop down</h3>
+
+    
+    <div class="dropdown-menu">
+        <span>Mouse hover me</span>
+        <div class="dropdown-content">
+            <p>Hello World!!</p>
+        </div>
+    </div>
+</body>
+</html>

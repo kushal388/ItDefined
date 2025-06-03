@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INLINE VS BLOCK</title>
+
+    <style>
+        .block{
+            display: block;
+            width: 200px;
+            height : 50px;
+            background-color: blue;
+            margin-bottom: 10px;
+            
+        }
+        .inline{
+            display: inline;
+            background-color:red;
+            padding: 5px 10px;
+            margin-left: 10px;
+            width: 200px;
+            height: 50px;
+        }
+
+        .inline-block{
+            display: inline-block;
+            background-color:yellow;
+            padding: 5px 10px;
+            margin-left: 10px;
+            width: 200px;
+            height: 50px;
+        }
+
+
+        /* ❌ width and height won’t work with display: inline.
+
+        📌 Why?
+                Inline elements cannot have their width or height set.
+
+                They are only as wide and tall as their content (plus padding and borders).
+
+                CSS ignores width and height for elements with display: inline 
+
+
+        💡: to overcome this 
+
+             we use inline -block to chnage the hieght and width
+
+             and remember still it come one after another not as one  below another 
+
+
+            | Display Type   | Width/Height Allowed? | Stack Vertically? | Sit Side-by-Side? |
+            | -------------- | --------------------- | ----------------- | ----------------- |
+            | `block`        | ✅ Yes                 | ✅ Yes             | ❌ No          |
+            | `inline`       | ❌ No                  | ❌ No              | ✅ Yes         |
+            | `inline-block` | ✅ Yes                 | ❌ No              | ✅ Yes         |
+                
+        */
+
+
+
+        .none{
+            display: none;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+
+    <!-- Block -->
+    <div class="block">BLOCK</div>
+    <div class="block">BLOCK</div>
+    <h5>block: Takes full width, stacks vertically, and allows width/height.</h5>
+
+    <!-- Inline -->
+
+    <div class="inline">INLINE</div>
+    <div class="inline">INLINE</div>
+    <h3>inline: Fits content, sits side by side, ignores width/height.</h3>
+
+
+    <!-- inline_block -->
+    <div class="inline-block">INLINE-BLOCK</div>
+    <div class="inline-block">INLINE_BLOCK</div>
+    <h3>inline-block: Sits side by side like inline, but allows width/height.</h3>
+
+
+    <!-- None -->
+    <div class="none">Nothing is visible</div>
+
+
+
+</body>
+</html> 

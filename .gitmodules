@@ -1,0 +1,3 @@
+[submodule "another-repo"]
+	path = another-repo
+	url = https://github.com/kushal388/NetFlix_CLone.git

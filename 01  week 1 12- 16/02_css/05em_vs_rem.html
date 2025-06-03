@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>em vs rem Example</title>
+  <style>
+    html {
+      font-size: 16px; /* 1rem = 16px */
+    }
+
+    .card {
+      font-size: 1rem;          /* 16px */
+      padding: 2em;             /* 2 * 16px = 32px */
+      margin: 2rem;             /* 2 * 16px = 32px */
+      border: 0.2em solid #333; /* 0.2 * 16px = 3.2px */
+      background-color: #f0f0f0;
+    }
+
+    .card h2 {
+      font-size: 1.5em; /* 1.5 * card's font-size = 24px */
+    }
+
+    .card p {
+      font-size: 1em; /* 1 * card's font-size = 16px */
+      margin-top: 1em; /* 16px margin above paragraph */
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Card Title</h2>
+    <p>This is some content inside the card. Padding, margin, and border use em and rem units.</p>
+  </div>
+</body>
+</html>

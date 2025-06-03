@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Units Demo</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      font-size: 16px; /* base font size for rem and em */
+    }
+
+    .section {
+      border: 2px solid #333;
+      margin-bottom: 20px;
+      padding: 10px;
+    }
+
+    .unit-box {
+      background-color: #f0f0f0;
+      padding: 10px;
+      margin-top: 10px;
+    }
+
+    .percent {
+      width: 50%;
+      background-color: lightblue;
+    }
+
+    .vw {
+      width: 50vw;
+      background-color: lightgreen;
+    }
+
+    .vh {
+      height: 30vh;
+      background-color: lightcoral;
+    }
+
+    .em {
+      width: 20em;
+      background-color: peachpuff;
+    }
+
+    .rem {
+      width: 20rem;
+      background-color: plum;
+    }
+
+    .ch {
+      width: 30ch;
+      background-color: lightgoldenrodyellow;
+    }
+
+    .vmin {
+      width: 20vmin;
+      background-color: lightseagreen;
+    }
+
+    .vmax {
+      width: 20vmax;
+      background-color: lightpink;
+    }
+
+    .label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="section">
+    <div class="label">🔷 50% Width (of Parent)</div>
+    <div class="unit-box percent">This box is 50% of its parent width.</div>
+  </div>
+
+  <div class="section">
+    <div class="label">🔷 50vw (Viewport Width)</div>
+    <div class="unit-box vw">This box is 50% of the browser window's width.</div>
+  </div>
+
+  <div class="section">
+    <div class="label">🔷 30vh (Viewport Height)</div>
+    <div class="unit-box vh">This box is 30% of the browser height. Resize vertically to see the effect.</div>
+  </div>
+
+  <div class="section">
+    <div class="label">🔷 20em (Relative to element's font size)</div>
+    <div class="unit-box em" style="font-size: 20px;">
+      This box is 20 times the font size (20px × 20 = 400px wide).
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">🔷 20rem (Relative to root font size)</div>
+    <div class="unit-box rem">
+      This box is 20 × root font size (16px) = 320px wide.
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">🔷 30ch (Character Width)</div>
+    <div class="unit-box ch">
+      This box is as wide as ~30 "0" characters.
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">🔷 20vmin (Smaller of viewport width or height)</div>
+    <div class="unit-box vmin">
+      This box uses the smaller side of the viewport to calculate width.
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">🔷 20vmax (Larger of viewport width or height)</div>
+    <div class="unit-box vmax">
+      This box uses the larger side of the viewport to calculate width.
+    </div>
+  </div>
+
+</body>
+</html>

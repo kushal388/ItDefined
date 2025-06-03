@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    #nav {
+      background-color: #ffffff;
+      height: 90px;
+      width: 100%;
+      position: relative;
+    }
+
+    .logo {
+      height: 65px;  
+      padding-top: 10px;
+      padding-left: 20px;
+    }
+
+    #nav-menu {   
+      position: absolute;
+      top: 30px;    
+      left: 40%;   
+    }
+
+    .nav-items {
+      display: inline-block;
+      padding: 0 12px;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    a:hover{
+      color:blue;
+    }
+
+    button {
+      position: absolute;
+      top: 25px;
+      right: 50px;
+      padding: 8px 16px;
+      background-color: #8861EA;
+      color: rgb(236, 211, 211);
+      
+    }
+  </style>
+</head>
+<body>
+
+  <div id="nav">
+    <a href="https://itdefined.org/">
+    <img class="logo" src="logo.png" alt="logo" /></a>
+
+    <ul id="nav-menu">
+      <li class="nav-items"><a href="#">Home</a></li>
+      <li class="nav-items"><a href="#">About</a></li>
+      <li class="nav-items"><a href="#">Courses</a></li>
+      <li class="nav-items"><a href="#">Contacts</a></li>
+      <li class="nav-items"><a href="#">Blog</a></li>
+    </ul>
+
+    <button>Login</button>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <title>Netflix Card Style</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #111;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    .gallery {
+      display: flex;
+      gap: 15px;
+      padding: 30px;
+      /* overflow-x: auto; */
+    }
+
+    .card {
+      position: relative;
+      /* flex-shrink: 0; */
+      width: 200px;
+      height: 300px;
+      /* border-radius: 1px; */
+      /* overflow: hidden; */
+      transition: transform 0.4s ease;
+      cursor: pointer;
+      background-color: #222;
+    }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+      /* object-fit: cover; */
+      border-radius: 12px;
+      transition: transform 0.4s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.3);
+      z-index: 10;
+    }
+
+    .card-info {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
+      padding: 10px;
+      /* box-sizing: border-box; */
+    }
+
+    /* .icons {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      right: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .icon {
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 50%;
+      padding: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      font-size: 16px;
+    } */
+
+    .info-line {
+      font-size: 13px;
+      margin-bottom: 4px;
+      color: #ddd;
+    }
+
+    .genre {
+      font-size: 13px;
+      color: #aaa;
+    }
+    .icc{
+        display: flex;
+        column-gap: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="gallery">
+    <div class="card">
+      <img src="image_1.webp" alt="Movie Image" />
+      <div class="card-info">
+        <div class="icc">
+            <div ><i class="fa-solid fa-play"></i></div>
+            <div ><i class="fa-solid fa-heart"></i></div>
+        </div>
+        <div class="info-line">U/A • 2h 44m</div>
+        <div class="genre">Comedy • Action</div>
+      </div>
+    </div>
+
+      <div class="card">
+      <img src="image_1.webp" alt="Movie Image" />
+      <div class="card-info">
+        <div class="icc">
+            <div ><i class="fa-solid fa-play"></i></div>
+            <div ><i class="fa-solid fa-heart"></i></div>
+        </div>
+        <div class="info-line">U/A • 2h 44m</div>
+        <div class="genre">Comedy • Action</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="wallpaper.webp" alt="Movie Image" />
+      <div class="icons">
+        <div class="icon">▶</div>
+        <div class="icon">＋</div>
+      </div>
+      <div class="card-info">
+        <div class="info-line">U/A • 1h 55m</div>
+        <div class="genre">Drama • Romance</div>
+      </div>
+    </div>
+    
+    <!-- Add more cards similarly -->
+  </div>
+</body>
+</html>

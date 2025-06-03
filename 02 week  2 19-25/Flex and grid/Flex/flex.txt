@@ -1,0 +1,129 @@
+
+
+🧱 FLEX CONTAINER PROPERTIES
+These go on the parent element (with display: flex or inline-flex):
+
+Property	Definition
+
+| Property                           | Definition                                                                                                                                                               |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **display**                        | Turns an element into a flex container. Values: `flex`, `inline-flex`.                                                                                                   |
+| **flex-direction**                 | Defines the **main axis** direction. Values: `row` (default), `row-reverse`, `column`, `column-reverse`.                                                                 |
+| **flex-wrap**                      | Allows items to wrap onto multiple lines. Values: `nowrap` (default), `wrap`, `wrap-reverse`.                                                                            |
+| **flex-flow**                      | Shorthand for `flex-direction` and `flex-wrap`. Example: `row wrap`.                                                                                                     |
+| **justify-content**                | Aligns items **horizontally** (on the main axis). Values: `flex-start`, `flex-end`, `center`, `space-between`, `space-around`, `space-evenly`.                           |
+| **align-items**                    | Aligns items **vertically** (on the cross axis) in a single line. Values: `stretch` (default), `flex-start`, `flex-end`, `center`, `baseline`.                           |
+| **align-content**                  | Aligns **multiple lines** on the cross axis (only works if `flex-wrap` is used). Values: `flex-start`, `flex-end`, `center`, `space-between`, `space-around`, `stretch`. |
+| **gap** / `row-gap` / `column-gap` | Adds spacing between flex items in both axes without using margins.                                                                                                      |
+
+
+📦 FLEX ITEM PROPERTIES
+These apply to the children inside a flex container:
+
+| Property        | Definition                                                                                                              |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| **order**       | Controls the visual order of items. Lower numbers appear first. Default is `0`.                                         |
+| **flex-grow**   | Controls how much an item should **grow** relative to others when there is extra space. Default is `0` (don’t grow).    |
+| **flex-shrink** | Controls how much an item should **shrink** when space is tight. Default is `1`.                                        |
+| **flex-basis**  | Sets the **initial size** of the item before it grows/shrinks. Can be a length (`200px`, `50%`) or `auto`.              |
+| **flex**        | Shorthand for `flex-grow flex-shrink flex-basis`. Common values: `1`, `0 1 auto`, `1 0 100px`.                          |
+| **align-self**  | Overrides `align-items` for a specific item. Values: `auto`, `flex-start`, `flex-end`, `center`, `baseline`, `stretch`. |
+
+
+=============================================================
+1)        You're seeing Item 2 and Item 3 shift downward slightly when you increase 
+        the font-size of Item 1.
+
+        solution:
+
+        Explanation:
+        1. align-items: first baseline:
+        This CSS property aligns all flex items based on the baseline of the first line of text inside them.
+
+        A baseline is the invisible line upon which most letters "sit" (like the line under a sentence).
+
+        When you align items by their baseline, the container ensures all items' first lines of text are aligned horizontally at the same baseline.
+
+        2. Why Item 2 & 3 shift:
+        Item 1 has a larger font size, so its baseline is lower inside the box compared to Items 2 and 3 (which have default font size).
+
+        To align their text baselines, the entire boxes of Item 2 and 3 are pushed downward slightly so that their smaller text baselines match the lowered baseline of Item 1's larger text.
+
+        3. Visual Summary:
+        Item	    Font Size	    Baseline Position	    Box Shift
+        Item 1	     1.5em	        Lower inside the box	    No shift
+        Item 2 & 3	1em (default)	Higher inside the box	Shifted down to align with Item 1
+
+        Solutions (if you want all boxes aligned equally at the top):
+        Replace:
+
+        css
+        Copy
+        Edit
+        align-items: first baseline;
+        with:
+
+        css
+        Copy
+        Edit
+        align-items: flex-start;
+        This aligns all items to the top of the container, ignoring their baselines.
+
+        TL;DR:
+        The shift happens because align-items: first baseline aligns the text, not the boxes. Larger text has a lower baseline, so smaller text boxes are pushed down to match it. Use align-items: flex-start to align box tops instead.
+
+
+
+2) Flex - wrap : nowarap  ==> Do not allow flex items to wrap to the next line.
+    flex-wrap : wrap  ==> next line
+
+
+    ->aalign content only works when we use flex-wrap
+    ->it works as X axis same as justify-content
+
+    align-content: 
+
+
+3) flex grows takes unit less value
+
+
+    flex-grow:1  ==> takes up  the remaining value
+
+    flex-shrink:0  ==> item won't sink if we shorten the size;
+    flex-shrink:5 ==> item will shrnk faster than the remaining
+
+    flex-basics:400px; ==> if we want to change the item size indiviually...
+
+
+    NOTE 💡 :
+    by usingf flex : _ _ _  [flex-grow , shrink, basicss]
+
+    eg: flex : 0 0 500px; 
+
+
+
+    another case :
+
+    if  
+
+      .container{
+            display: flex;
+            align-items: flex-start;
+      }
+
+
+      .item{
+        align-self: center;
+      }
+
+
+
+      here ==> flex-start will  get over ridden by align-self : center
+
+
+4) order property
+
+ if  we give order to item 3  as -1 it will comes 
+ by default order starts from 0 
+ so -1 will before the 0
+ 

@@ -1,0 +1,26 @@
+[target]{
+  color: red;
+  font-size: 30px;
+  padding: 20px;
+  display: block;
+}
+
+/* starts with */
+
+
+[href^="https"]{
+    background-color: #f4f0ff;
+}
+
+/* ends with */
+
+[href$="html"]{
+    background-color: bisque;
+}
+
+
+/* contains */
+
+[href*="xy"]{
+    background-color: rgba(109, 6, 6, 0.808);
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <title>Netflix Style Card (No Position)</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #111;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    .gallery {
+      display: flex;
+      gap: 15px;
+      padding: 30px;
+      overflow-x: auto;
+    }
+
+    .card {
+      width: 200px;
+      background-color: #222;
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease-in-out;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: scale(1.5);
+      z-index: 10;
+    }
+
+    .card img {
+      width: 100%;
+      height: 250px;
+      /* object-fit: cover; */
+      border-radius: 12px 12px 0 0;
+    }
+
+    .card-body {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .icons-row {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .icon-btn {
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .info-line {
+      font-size: 13px;
+      color: #ccc;
+    }
+
+    .genre {
+      font-size: 13px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <div class="gallery">
+    <div class="card">
+      <img src="image_1.webp" alt="Movie Image">
+      <div class="card-body">
+        <div class="icons-row">
+          <button class="icon-btn">▶ Play</button>
+          <button class="icon-btn">＋ Add</button>
+        </div>
+        <div class="info-line">U/A • 2h 44m</div>
+        <div class="genre">Comedy • Action</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="wallpaper.webp" alt="Movie Image">
+      <div class="card-body">
+        <div class="icons-row">
+          <button class="icon-btn">▶ Play</button>
+          <button class="icon-btn">＋ Add</button>
+        </div>
+        <div class="info-line">U/A • 1h 55m</div>
+        <div class="genre">Drama • Thriller</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

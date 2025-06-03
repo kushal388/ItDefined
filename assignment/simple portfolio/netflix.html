@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #141414;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("stranger_things.jpg");
+  height: 90%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text{
+  position: relative;
+  color: white;
+  top: 50%;
+  width: 300px;
+  padding-left: 30px;
+  text-align: justify;
+}
+
+.hero-button{
+  display: flex;
+  column-gap: 15px;
+  padding-top: 10px;
+}
+.hero-button button{
+  width: 150px;
+  border: none;
+  border-radius: 5%;
+  
+}
+.hero-text button:hover {
+  background-color: #555;
+  color: white;
+}
+
+
+.nav-bar{
+  padding-left: 20px;
+  display: flex;
+  background-color: black;
+  
+}
+.nav-left{
+  display: flex;
+  column-gap: 15px;
+
+}
+
+.nav-left #nt-logo{
+  width:150px;
+  height: 50px;
+  
+}
+.nav-left ul {
+  display: flex;
+  color: white;
+  list-style: none;
+  column-gap:25px;
+  position: relative;
+  top: 30%;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.nav-right ul{
+  display :flex;
+  color: white;
+  list-style: none;
+  column-gap:20px;
+  position: relative;
+  left:400px;
+  justify-content: center;
+  top:30%;
+  cursor: pointer;
+}
+
+
+/* --.---------------------------------------------------------- */
+
+.container{
+            margin: 0 auto;
+            flex-wrap: nowrap;
+        }
+
+ .item{
+      width: 290px;
+      height: 250px;
+       border:0.5px solid black;
+        background-color: #0c64bb6b;
+      }
+
+.container{
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+   }       
+
+ /* ------------------------------------------------------------ */
+
+section {
+      display: flex;
+      flex-direction: row;
+      margin:15px;
+    }
+img {
+      width: 290px;
+      height: 250px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+img {
+    /* transition: width 0.5s ease-in-out; */
+    transition: transform 0.5s ease-in-out;
+  }
+img:hover {
+    /* width: 400px; */
+    transform: scale(1.3);
+  
+  }
+
+  /* ............................................................. */
+
+
+  footer {
+  
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  height: 60px;
+}
+
+footer a {
+  color: #ffffff;
+  margin: 15px;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+footer p {
+  margin-top: 10px;
+  font-size: 0.8rem;
+}
+
+.footer-lists{
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  cursor: pointer;
+  
+}
+
+ul a{
+  text-decoration: none;
+  color: white;
+}
+
+/* ............................................................. */
+
+</style>
+</head>
+<body>
+  <nav>
+ <div class="nav-bar">
+    <div class="nav-left" >
+      <img id="nt-logo" src="Netflix_Logo_RGB.png" alt="netflix_logo" >
+      <ul>
+        <li>Home</li>
+        <li>TV shows</li>
+        <li>Movies</li>
+        <li>Games</li>
+        <li>New & Popular</li>
+        <li>My List</li>
+        <li>Browse by language</li>
+        
+        
+      </ul>
+    </div>
+
+
+    <div class="nav-right">
+        <ul>
+        <li><i class="fa-solid fa-magnifying-glass"></i></li>
+        <li>Children</li>
+        <li><i class="fa-solid fa-bell"></i></li>
+        <li> <img  style="width: 35px; height:35px;" src="netflix avatar.png" alt=""><i class="fa-solid fa-caret-down"></i></li>
+        </ul>
+    </div>
+
+
+  </div>
+  </nav>
+
+<div class="hero-image">
+
+  <div class="hero-text">
+    <h1 style="font-size:50px">STRANGER THINGS</h1>
+    <p>Welcome to Hawkins, Indiana, a small town with big secrets.Strange sightings. Government cover-ups. And a dark force that turns everything upside down.</p>
+    <div class="hero-button">
+      <button><i class="fa-solid fa-play"></i> Play  </button>
+      <button><i class="fa-solid fa-info"></i> More Info</button>
+    </div>
+  </div>
+</div>
+
+
+
+<div>
+  <span style="color: white; padding:5px ;">Popular Movies</span>
+  <section>
+    <img src="image_1.webp"  />
+    <img src="image_2.webp" />
+    <img src="image_3.avif" >
+    <img src="image_4.jpg" >
+    <img src="image_5.jpg" />
+
+  </section>
+
+
+  <span style="color: white; padding:5px ;">Recent Release in India </span>
+    <section>
+      
+    <img src="image_1.webp"/>
+    <img src="image_2.webp" />
+    <img src="image_3.avif" >
+    <img src="image_4.jpg" >
+    <img src="image_5.jpg" />
+
+  </section>
+
+
+    <span style="color: white; padding:5px ;">Kannada Movies </span>
+    <div class="container">
+        <div class="item item-1"><img src="image_1.webp" /></div>
+        <div class="item item-2"><img src="image_1.webp" /></div>
+        <div class="item item-3"><img src="image_1.webp" /></div>
+        <div class="item item-4">Item 4</div>
+        <div class="item item-5">Item 5</div>
+    </div>
+
+    <br><br>
+    <span>Top Movies</span>
+    <div class="container">
+        <div class="item item-1">Item 1</div>
+        <div class="item item-2">Item 2</div>
+        <div class="item item-3">Item 3</div>
+        <div class="item item-4">Item 4</div>
+        <div class="item item-5">Item 5</div>
+    </div>
+
+
+   
+
+
+  </div>   
+    
+    <footer id="contact">
+    <a href="#" ><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#" ><i class="fab fa-twitter"></i></a>
+   <a href="#" ><i class="fab fa-youtube"></i></a>
+
+   <div>
+      <ul class="footer-lists">
+        <li>Audio Description</li>
+        <li>Help centre</li>
+        <li>gift cardn</li>
+        <li>media centre</li>
+ 
+      </ul>
+     </div>
+
+
+     <div>
+      <ul class="footer-lists">
+        <li>Legal Notice</li>
+        <li>cookie Preferences</li>
+        <li>Corporate Information</li>
+        <li>Contact us</li>
+      </ul>
+    </div>
+    <p>&copy;1997-2025 Netflix, Inc </p>
+  </footer>
+
+</body>
+</html>

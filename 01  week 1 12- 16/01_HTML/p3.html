@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>p3
+    
+  </title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+    }
+
+    nav {
+      background-color: #333;
+      padding: 1rem;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      color: yellow;
+    }
+
+    section {
+      padding: 100px 20px;
+      min-height: 100vh;
+    }
+
+    #home { background-color: #f4f4f4; }
+    #about { background-color: #ddd; }
+    #projects { background-color: #bbb; }
+    #contact { background-color: #999; }
+
+    h2 {
+      margin-bottom: 1rem;
+    }
+
+    /* Add top padding to account for fixed nav */
+    section {
+      scroll-margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact Me</a></li>
+    </ul>
+  </nav>
+
+  <section id="home">
+    <h2>Home</h2>
+    <p>Welcome to my portfolio!</p>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>I am a web developer with 3 years of experience in Java and React.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <p>Here are some of my featured projects:</p>
+    <ul>
+      <li>Portfolio Website</li>
+      <li>Task Management App</li>
+      <li>Weather Dashboard</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: you@example.com</p>
+    <p>LinkedIn: linkedin.com/in/yourname</p>
+  </section>
+
+</body>
+</html>

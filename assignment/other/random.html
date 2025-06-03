@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pure HTML & CSS Hover Example</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .wrapper {
+      position: relative;
+      flex: 1;
+    }
+
+    /* Top Nav */
+    .menu {
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      background: #222;
+      padding: 1em;
+      color: white;
+      z-index: 2;
+    }
+
+    .menu-item {
+      position: relative;
+      cursor: pointer;
+    }
+
+    /* Hover Content (appears near bottom) */
+    .content-box {
+      position: absolute;
+      bottom: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: white;
+      border: 1px solid #ccc;
+      padding: 1em;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 300px;
+      text-align: center;
+      display: none;
+      z-index: 1;
+    }
+
+    /* Show on hover of respective menu item */
+    .menu-item:hover .content-box {
+      display: block;
+    }
+
+    /* Fill the space below the nav to simulate full height */
+    .filler {
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="menu">
+      <div class="menu-item">Home
+        <div class="content-box">Welcome to the Home section!</div>
+      </div>
+      <div class="menu-item">About
+        <div class="content-box">We are a creative web team!</div>
+      </div>
+      <div class="menu-item">Projects
+        <div class="content-box">Check out our latest projects.</div>
+      </div>
+      <div class="menu-item">Contact
+        <div class="content-box">Reach us at email@example.com.</div>
+      </div>
+    </div>
+
+    <div class="filler"></div> <!-- Adds height below the menu -->
+  </div>
+</body>
+</html>

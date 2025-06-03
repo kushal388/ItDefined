@@ -1,0 +1,87 @@
+ul {
+  float: right;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  display: inline-block;
+  padding: 15px;
+  position: relative;
+}
+
+ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown-menu {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.dropdown-content li a {
+  display: block;
+  padding: 10px;
+  color: black;
+}
+
+
+.dropdown-menu:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content li:hover {
+  background-color: #f3e0e0;
+}
+
+
+
+
+
+
+
+
+
+
+/* ul{
+    float:right
+}
+
+li{
+    display: inline-block;
+    padding:5px;
+    position: relative;
+}
+
+
+ NOte: to select only anchor within list 
+li a{
+    text-decoration: none;
+}
+
+.dropdown-menu ul{
+    display: none;
+    position: absolute;
+}
+
+.dropdown-menu:hover ul {
+  display: block;
+}
+
+.drop-item {
+  display: block;
+  padding: 10px 15px;
+  white-space: nowrap;
+} 
+
+*/

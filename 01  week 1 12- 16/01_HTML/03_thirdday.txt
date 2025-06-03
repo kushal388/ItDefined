@@ -1,0 +1,56 @@
+Catgerozing tags
+
+
+1) void tags:
+                self clsoing tags
+                eg: input, img, br, link, meta
+
+
+
+2) Sematic tags :
+                    name of tag itself tells what it is
+                    eg: header, footer, section, aside, nav , main , article
+
+
+    non sematic tagas:  <div></div>
+
+3) Block and inline elemets
+
+
+                block level - elemets : The elemts that occupied width of our page
+                                        eg: <h1></h1> - <h6>,<p></p><div></div>, header, footer, nav , main
+
+                                        one below the another 
+
+
+
+                inlin level elements: the elements that will set one beside another
+                                        <span></span>  <a></a> button
+                                        input
+
+
+
+4) Attributes :
+            provids some addtitional information of elements
+
+           Generic:  id,class,TITLE,Style,data,
+
+            for only images: Src width height alt hidden
+
+
+            anchorr tag : href target rel Types
+
+            input : placeholder , min-lentgh, max..... , required, diabled, readonly, checked
+
+
+
+
+5) Entity and elements
+
+    Entity to represent something!!!!!
+
+
+
+    copyrights , dollar
+
+     for more refer mdn websites....

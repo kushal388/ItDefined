@@ -1,0 +1,48 @@
+ul#main {
+    float: right;
+}
+
+#main li{
+    display: inline-block;
+    padding-right: 20px;
+    position:relative;
+}
+#main a{
+    text-decoration: none;
+}
+#main a:hover{
+    color:red
+}
+
+#main li a:active{
+    color: yellow;
+}
+
+ul#nested{
+    display:none;
+    position:absolute;
+    left:-20px;
+    /* background-color:beige; */
+    width:150px
+    
+}
+
+#nested li{
+    background-color:beige;
+    display: block;
+    padding-right: 20px;
+    padding: 10px 0px;
+}
+
+
+#nested li:hover{
+    background-color:burlywood;
+
+}
+
+#main li:hover ul#nested{
+    display: block;
+}
+
+
+

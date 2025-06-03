@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Login Form</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: sans-serif;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    #loginForm {
+      background-color: white;
+      width: 300px;
+      padding: 20px;
+      margin: 20px auto;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .label {
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+
+    .inputField {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    .submitBtn {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .submitBtn:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Login Form</h2>
+
+  <form id="loginForm" action="/submit-login" method="post" enctype="multipart/form-data">
+    <div class="label">Username:</div>
+    <input class="inputField" type="text" name="username">
+
+    <div class="label">Password:</div>
+    <input class="inputField" type="password" name="password">
+
+    <div class="label">Upload File: ID Proof</div>
+    <input class="inputField" type="file" name="file">
+
+    <input class="submitBtn" type="submit" value="Login">
+  </form>
+
+</body>
+</html>
+
+
+
+<!-- 
+
+Form: HTML forms are used to collect different kinds of user input. A form is an area that
+can contain form elements
+
+
+attributes:
+
+action: where we need to store
+
+
+method: 
+    get:Data is sent in the URL as query parameters.
+    post: Data is sent in the body of the request (not in the URL).
+
+
+enctype="multipart/form-data compulsory in file 
+
+-->

@@ -1,0 +1,67 @@
+Types of tags
+
+
+1) structural tags
+
+2) formatiting tags
+
+3) list, link 
+
+4) media , form , table
+
+5) meta
+
+6) canvas tags for transition with JS
+
+
+7) subscript superscript
+<sub></sub>
+<sup></sup>
+
+
+
+8) List -----
+            a) ordered list
+            b) unordered list
+            c) Data list
+
+
+
+
+9)media tags
+     <img src="" alt="">
+    <video  controls src=""></video>
+    <audio controls src=""></audio>   // in audio controls must refer internet
+    <iframe src="" frameborder="0"></iframe>  // to embed any youtube videos, maps......
+
+
+            a) absolute path ==> src = "url"
+            b) Relative path ===> src= "/file/location/ .jpg"
+
+
+
+10) Image maps:    (refer internet)
+
+    The HTML <map> tag defines an image map. 
+    An image map is an image with clickable areas. The areas are defined with one or more <area> tags.
+
+
+    <img src="workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+
+        <map name="workmap">
+        <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+        <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+        <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="coffee.htm">
+        </map>
+
+
+11) Form tag
+
+        refer internet
+        note:
+        select tag💡
+        <form  action method enctype></form> 
+        enctype - refer internet 
+
+
+12) table tag

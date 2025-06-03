@@ -1,0 +1,54 @@
+ 1) understant min-widh and max width
+ 
+ @media (min-width:500px) {
+            /* ''' after 500px only color red will be visible '''' */ 
+            h1{
+                color:red;
+            }
+        } 
+
+
+@media (max-width:500px) {
+            upto 500px width color will shows red after 500px it wont
+            h1{
+                color:red;
+            }
+        }
+
+
+2) Max-width - upto --
+   Min-width -- after
+
+
+3) types of screen
+
+    screen media : fro this much of screen
+    Print: for print purpose
+    speech : text  to speach...
+
+    combining all together called queries
+
+
+    syntax: @media all (min/mqax....){
+        attributes{
+
+        }
+    }
+
+    // by default all ==> otherwise use can give screen print
+
+
+
+4) speceficity:
+
+    if 2 styles  applied to same atributestakes the recent one 
+
+    if class and  attributes are there  .class will be higher priority no matter which ever is latest
+
+    id calss and id prsent Id will be highest priority
+
+    inline styling will more priority
+
+
+    above thid all
+    we can give -----  !Important
