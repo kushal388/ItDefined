@@ -80,7 +80,9 @@ function outerFunctions(){
         
     }
 
-    return innerFunction 
+    return innerFunction // retrunung function object instead of innerfunction()
+
+
     
     
     
@@ -111,4 +113,4 @@ function outerFunctions(greet){
 let out = outerFunctions('good morning')    // good morning
 out("kushal")  //   my name is  kushal
 
-let out2 = outerFunctions('good morning') ("Meghu")  // we can use this aslo
+let out2 = outerFunctions('good morning') ("Meghu")  // we can use this also
