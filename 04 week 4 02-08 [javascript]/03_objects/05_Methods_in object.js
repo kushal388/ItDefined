@@ -5,6 +5,19 @@
 // 3)bind   => creates a new function when called has its value set to a specefied value witha given sequence of arguments preceding any provided when the new fucntion is called
 
 
+
+/*
+        | Use Case                 | How to Pass Arguments             |
+        | ------------------------ | --------------------------------- |
+        | `bind(thisArg, a, b)`    | Pass separately (comma-separated) |
+        | `call(thisArg, a, b)`    | Pass separately (comma-separated) |
+        | `apply(thisArg, [a, b])` | Pass as array `[]`                |
+
+
+
+
+*/
+
 let student ={
     get_name : function(){
         return this.firstName + " "+ this.lastName 
@@ -78,8 +91,8 @@ let Virat3 ={
 console.log("output4 apply:", output4);                             // output4 apply: Sachin Tendukar  and his age is  50 ans lives in Mumbai
 
 
-//3) bind  its a function we use  ,  or  []
-// Note only if a fucntion is expectinng  array then use  [] otherwise  ,
+//3) bind  its a function we use  , separeted
+
 
 let student4 ={
     get_name : function(age , city){
