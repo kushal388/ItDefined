@@ -1,0 +1,45 @@
+| Flag | Meaning                          | Example     |
+| ---- | -------------------------------- | ----------- |
+| `g`  | Global search (find all matches) | `/a/g`      |
+| `i`  | Case-insensitive match           | `/a/i`      |
+| `m`  | Multiline                        | `/^a/m`     |
+| `s`  | Allows `.` to match newline      | `/./s`      |
+| `u`  | Unicode                          | `/\u{61}/u` |
+| `y`  | Sticky                           | `/a/y`      |
+
+
+| Symbol   | Meaning                        | Example              | Matches             |         |                |
+| -------- | ------------------------------ | -------------------- | ------------------- | ------- | -------------- |
+| `.`      | Any character (except newline) | `/a.c/`              | `"abc", "a1c"`      |         |                |
+| `^`      | Start of string                | `/^a/`               | `"abc"`             |         |                |
+| `$`      | End of string                  | `/c$/`               | `"abc"`             |         |                |
+| `*`      | 0 or more                      | `/lo*/`              | `"l", "lo", "loo"`  |         |                |
+| `+`      | 1 or more                      | `/lo+/`              | `"lo", "loo"`       |         |                |
+| `?`      | 0 or 1 (optional)              | `/colou?r/`          | `"color", "colour"` |         |                |
+| `\d`     | Digit (0–9)                    | `/\d+/`              | `"123"`             |         |                |
+| `\D`     | Non-digit                      | `/\D+/`              | `"abc"`             |         |                |
+| `\w`     | Word character `[a-zA-Z0-9_]`  | `/\w+/`              | `"word123"`         |         |                |
+| `\W`     | Non-word character             | `/\W+/`              | `"!"`               |         |                |
+| `\s`     | Whitespace                     | `/\s+/`              | `" "`               |         |                |
+| `\S`     | Non-whitespace                 | `/\S+/`              | `"abc"`             |         |                |
+| `[...]`  | Character set                  | `/[aeiou]/`          | `"a", "e"`          |         |                |
+| `[^...]` | Negated set                    | `/[^aeiou]/`         | `"b", "c"`          |         |                |
+| \`(a     | b)\`                           | Alternation (a or b) | \`/(cat             | dog)/\` | `"cat", "dog"` |
+| `{n}`    | Exactly n times                | `/\d{2}/`            | `"12"`              |         |                |
+| `{n,}`   | At least n                     | `/\d{2,}/`           | `"1234"`            |         |                |
+| `{n,m}`  | Between n and m                | `/\d{2,4}/`          | `"123", "1234"`     |         |                |
+| `()`     | Grouping                       | `/(ab)+/`            | `"abab"`            |         |                |
+| `\`      | Escape special characters      | `/\$/`               | Matches `"$"`       |         |                |
+
+
+
+
+cheatsheat summary
+| Concept     | Syntax            | Meaning/Example                              |
+| ----------- | ----------------- | -------------------------------------------- |
+| Start/End   | `^`, `$`          | `/^a/` starts with 'a', `/c$/` ends with 'c' |
+| Wildcard    | `.`               | `/a.c/` matches "abc", "a1c"                 |
+| Quantifiers | `*`, `+`, `{n}`   | `/a*/` = 0+ a, `/a{3}/` = aaa                |
+| Sets        | `[abc]`, `[^abc]` | match a, b, or c / NOT a, b, or c            |
+| Shortcuts   | `\d`, `\w`, `\s`  | digits, word chars, spaces                   |
+| Flags       | `g`, `i`, `m`     | global, ignore case, multiline               |                      

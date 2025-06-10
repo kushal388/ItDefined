@@ -1,0 +1,5 @@
+| Method    | What it does                                                          |
+| --------- | --------------------------------------------------------------------- |
+| `call()`  | Calls function immediately with specified `this` and args             |
+| `apply()` | Same as `call()`, but takes args as an array                          |
+| `bind()`  | Returns a new function with bound `this`, doesn’t call it immediately |

@@ -3,6 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 *{
@@ -12,6 +13,7 @@
 }
 
 body, html {
+  height: 100%;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   background-color: #141414;
@@ -19,7 +21,7 @@ body, html {
 
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("stranger_things.jpg");
-  height: 90%;
+  height: 70%;
   background-position: center;
   background-size: cover;
   position: relative;
@@ -49,9 +51,8 @@ body, html {
   background-color: #555;
   color: white;
 }
-
-
 .nav-bar{
+  /* position: fixed; */
   padding-left: 20px;
   display: flex;
   background-color: black;
@@ -124,15 +125,13 @@ img {
       height: 250px;
       margin-right: 10px;
       cursor: pointer;
+      transition: transform 0.5s ease-in-out
     }
 
-img {
-    /* transition: width 0.5s ease-in-out; */
-    transition: transform 0.5s ease-in-out;
-  }
+
 img:hover {
-    /* width: 400px; */
-    transform: scale(1.3);
+    
+     transform: scale(1.1);
   
   }
 
@@ -174,12 +173,10 @@ ul a{
   color: white;
 }
 
-/* ............................................................. */
-
 </style>
 </head>
 <body>
-  <nav>
+
  <div class="nav-bar">
     <div class="nav-left" >
       <img id="nt-logo" src="Netflix_Logo_RGB.png" alt="netflix_logo" >
@@ -208,7 +205,6 @@ ul a{
 
 
   </div>
-  </nav>
 
 <div class="hero-image">
 
@@ -227,22 +223,21 @@ ul a{
 <div>
   <span style="color: white; padding:5px ;">Popular Movies</span>
   <section>
-    <img src="image_1.webp"  />
+    <img src="image_1.webp" />
     <img src="image_2.webp" />
-    <img src="image_3.avif" >
-    <img src="image_4.jpg" >
+    <img src="image_3.avif" alt="">
+    <img src="image_4.jpg" alt="">
     <img src="image_5.jpg" />
 
   </section>
 
 
   <span style="color: white; padding:5px ;">Recent Release in India </span>
-    <section>
-      
-    <img src="image_1.webp"/>
+  <section>
+    <img src="image_1.webp" />
     <img src="image_2.webp" />
-    <img src="image_3.avif" >
-    <img src="image_4.jpg" >
+    <img src="image_3.avif" alt="">
+    <img src="image_4.jpg" alt="">
     <img src="image_5.jpg" />
 
   </section>
@@ -267,10 +262,6 @@ ul a{
         <div class="item item-5">Item 5</div>
     </div>
 
-
-   
-
-
   </div>   
     
     <footer id="contact">
@@ -285,11 +276,12 @@ ul a{
         <li>Help centre</li>
         <li>gift cardn</li>
         <li>media centre</li>
- 
+        
+        
+        
+        
       </ul>
      </div>
-
-
      <div>
       <ul class="footer-lists">
         <li>Legal Notice</li>
