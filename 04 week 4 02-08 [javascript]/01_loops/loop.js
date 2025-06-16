@@ -57,7 +57,7 @@ for(let i=0; i<x.length; i++){
 // *************************************
 
 // break => come out of loop
-// skio that remaing woul print
+// skip that remaing woul print
 
 for(let i=0 ; i< 30 ; i++){
     if(i == 13){

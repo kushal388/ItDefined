@@ -50,8 +50,8 @@ console.log(sum);
 /*
 let arr = [10,40,35,20]
 
-let first =-1;  // least 
-let second =-1;
+    let first =-1;  // least 
+    let second =-1;
 
 
 for(let i =0 ; i<arr.length ; i++){
@@ -119,15 +119,172 @@ console.log(second);
 // greet("Kushal", sayBye());
 
 
+// Rotate left by 1
+    // let arr = [1,2,3,5,6]
+    // let rotate = []
+    // for(let i=1;i<arr.length;i++){
+    //     rotate.push(arr[i])
+        
+    // }
+    // rotate.push(arr[0])
+    // console.log(rotate);  // [ 2, 3, 5, 6, 1 ]
 
-// function createCounter(){
-//     let count = 0;
-//     let name = "kushal"
+
+// rotate Right by 1
+    // let arr = [1,2,3,5,6]
+    //  let rotate = []
+    //  rotate.push(arr[arr.length-1])
+    //  for(let i=0;i<arr.length-1;i++){
+    //     rotate.push(arr[i])
+        
+    //  }
+    
+    // console.log(rotate);
+
+
+// sum of alternate elements
+    // let arr = [1,2,3,5,6,7,8]
+    // let altSum = 0;
+    // for (let i = 0; i < arr.length; i += 2) {
+    //     altSum += arr[i];
+    // }
+    // console.log(altSum);
+
+// Count number of even and odd numbers
+    // let arr = [1,2,3,5,6,7,8]
+    // let even = 0, odd = 0;
+    // for (let i = 0; i < arr.length; i++) {
+    // if (arr[i] % 2 === 0) {
+    //     even++;
+    // }
+    // else {
+    //     odd++;
+    // }
+    // }
+    // console.log(odd);
+    // console.log(even);
+
+
+//  Find peak element (greater than neighbors)
+    // let arr = [1, 3, 2, 5, 4, 6, 1];
+    // for (let i = 1; i < arr.length - 1; i++) {
+    // if (arr[i] > arr[i - 1] && arr[i] > arr[i + 1]) {
+    //     console.log("Peak:", arr[i]);
+    // }
+    // }
+
+
+//  Check if array contains duplicate
+    // let arr = [1,2,3,5,2,4,6,7,8]
+    // let Dup = false;
+    // for (let i = 0; i < arr.length; i++) {
+    //   for (let j = i + 1; j < arr.length; j++) {
+    //     if (arr[i] === arr[j]) {
+    //         Dup = true;
+    //     }
+    //   }
+    // }
+
+    // console.log(Dup); // true
 
 
 
 
-const numbers = [1, 2, 3, 4, 5, 6];
+
+// unique array
+    // let arr = [1,2,3,4,5,4,6]
+    // let out = []
+
+    // for(let i = 0; i<arr.length ; i++){
+    //     let count = 0;
+
+    //     for (let j=0 ; j<arr.length ; j++){
+    //         if(arr[i]== arr[j]){
+    //             count++
+    //         }
+    //     }
+
+    //     if(count === 1){
+    //         out.push(arr[i])
+
+    //     }
+    // }
+
+    // console.log(out);
+
+
+// Duplicate array
+
+        // let arr = [1, 2, 3, 4, 5, 4, 5, 3,1 ,6];
+        // let result = [];
+
+        // for (let i = 0; i < arr.length; i++) {
+        //     let count = 0;
+
+        //     for (let j = 0; j < arr.length; j++) {
+        //         if (arr[i] === arr[j]) {
+        //             count++;
+        //         }
+        //     }
+
+            
+        //     if (count > 1) {
+                
+        //         let alreadyAdded = false;
+        //         for (let k = 0; k < result.length; k++) {
+        //             if (result[k] === arr[i]) {
+        //                 alreadyAdded = true;
+        //                 break;
+        //             }
+        //         }
+
+        //         if (!alreadyAdded) {
+        //             result.push(arr[i]);
+        //         }
+        //     }
+        // }
+
+        // console.log(result); 
+
+
+
+// check array is sorted
+// let arr = [1, 2, 3, 4, 5, 4, 5, 3,1 ,6];
+        // let arr = [1,2,3,4,5]
+        // let sorted = true;
+        // for (let i = 1; i < arr.length; i++) {
+        //     if (arr[i] < arr[i - 1]) {
+        //         sorted = false
+        //     }
+        // } 
+        // console.log(sorted);
+
+
+function missingNumber(arr){
+    
+    for(let i=1 ; i< arr.length+1;i++){
+        let found = false;
+        for(let j = 0 ; j< arr.length ; j++){
+            if( arr[j] === i){
+                found= true;
+                break;
+            }
+
+        }
+
+        if(!found){
+            console.log(i);
+            
+        }
+   
+    }
+    
+    
+}
+
+let resArr = [8, 2, 4, 5, 3, 7, 1];
+console.log(missingNumber(resArr));
+
 
 
 
