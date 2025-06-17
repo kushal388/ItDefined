@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+    
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        .box{
+          height: 100px; 
+          width: 100px;
+          border:1px solid black 
+        }
+
+        .black{
+            background-color: black;
+        }
+
+        .white{
+            background-color: white;
+        }
+
+
+      
+    
+       
+    </style>
+
+
+</head>
+<body>
+
+    <input type="button"  onclick="createChessBoard()"
+    style="padding: 10px; margin: 20px;border-radius: 10px ; color: white; background-color: blue" value="Click me">
+    
+    
+    <div id="root" style="display: flex ; flex-wrap: wrap; height: 800px; width: 800px; margin: auto; ">
+
+       
+
+    </div>
+
+
+
+
+    <script>
+
+        let createChessBoard = () => {
+            let root = document.querySelector('#root')
+            let box;
+            let isBlack = false
+
+            for(let i=0 ; i<64; i++){
+                
+                box = document.createElement('div')
+                box.classList.add('box')
+                
+                if(isBlack){
+                    box.classList.add('black')
+                }else{
+                    box.classList.add('white')
+                }
+
+                //This line flips the color after placing each square. So, every square alternates between black and white
+                isBlack = !isBlack
+
+                if((i+1) % 8 == 0){
+                isBlack = !isBlack // This line flips the starting color at the beginning of each new row.
+                } 
+
+                root.appendChild(box)
+            }
+            console.log("button clicked");
+            
+
+        }
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>

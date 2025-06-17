@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="click_me">Click me</button>
+</body>
+
+    <script>
+
+        const button_over = () => {console.log("You hovered on button");};
+
+
+        let button = document.querySelector('#click_me')
+
+        // syntax : addEventListener( "action", callback())
+        button.addEventListener('click', button_clicked)
+         button.addEventListener('mouseover', button_over);
+
+
+        function button_clicked(){
+            console.log("you clicked on button");
+            
+        }
+
+        // let button_clicked = () => {
+        //     console.log("you clicked on button");
+        // }
+
+        //note : if i use arrow function i should declare the function at top bcz of hoisting it will give error
+
+        // ****************************************
+
+        // keyboard arrow button
+
+        let  key_down = (event) => {
+            console.log(`you clicked on ${event.key} button`);  // you clicked on ArrowDown button
+            
+        }
+
+        document.addEventListener('keydown', key_down)
+
+
+        // event capturing :top to bottom down approach  // if last el is true              // watch yt 
+        // event bubbling : bottom to  top approach      //  if last el is false
+
+
+    </script>
+</html>
+

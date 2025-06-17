@@ -259,31 +259,88 @@ console.log(second);
         // } 
         // console.log(sorted);
 
+// missing number
+        // let arr = [8, 2, 4, 5, 3, 7, 1];
 
-function missingNumber(arr){
+        // for (let i = 1; i < arr.length + 1; i++) {
+        // let found = false;
+
+        // for (let j = 0; j < arr.length; j++) {
+        //     if (arr[j] === i) {
+        //     found = true;
+        //     break;
+        //     }
+        // }
+
+        // if (!found) {
+        //     console.log(i); // This is the missing number
+        // }
+        // }
+
+
+// Replace each element with next greatest
+
+// let arr = [4,5,2,10,8]
+
+// for(let i=0 ; i< arr.length ;i++){
+//     let nxt_greatest =-1;
+//     for(let j= i+1 ; j< arr.length ; j++){
+//         if(arr[j]> arr[i]){
+//             nxt_greatest = arr[j]
+//             break;
+//         }
+//     }
+//     arr[i] = nxt_greatest
+// }
+
+// console.log(arr); //  [ 5, 10, 10, -1, -1 ]
+
+//Replace each element with next samllest
+    // let arr = [4, 5, 2, 10, 8];
+
+    // for (let i = 0; i < arr.length; i++) {
+    // let nextGreatest = -1;
+    // for (let j = i + 1; j < arr.length; j++) {
+    //     if (arr[i] > arr[j]) {
+    //     nextGreatest = arr[j];
+    //     break;
+    //     }
+    // }
+    // arr[i] = nextGreatest;
+    // }
+
+    // console.log(arr); // [ 2, 2, -1, 8, -1 ]
+
+
+
+// Armstrong number // 0,153,370,371, 407 
+
+let num = 153
+let sum =0
+let temp = num
+
+while(temp >0){
+    y = temp % 10
+    // console.log("to get last digit ", temp , y);
     
-    for(let i=1 ; i< arr.length+1;i++){
-        let found = false;
-        for(let j = 0 ; j< arr.length ; j++){
-            if( arr[j] === i){
-                found= true;
-                break;
-            }
-
-        }
-
-        if(!found){
-            console.log(i);
-            
-        }
-   
-    }
+    sum += y**3
+    // console.log("sum is ", temp , sum);
     
+    temp = parseInt(temp/10)
+
+    // console.log("remove last digit " ,temp);
     
 }
 
-let resArr = [8, 2, 4, 5, 3, 7, 1];
-console.log(missingNumber(resArr));
+console.log(num ,sum);
+if(num == sum){
+    console.log("Armstrong number")
+}
+else{
+    console.log("not an Armstrong number");
+    
+}
+
 
 
 

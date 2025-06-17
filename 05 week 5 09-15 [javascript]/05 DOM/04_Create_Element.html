@@ -81,12 +81,19 @@
             heading.style.backgroundColor = "aliceblue"
 
             heading.setAttribute('id' , "h3_tag")
-            heading.setAttribute('class', "h3__tag")
+            heading.setAttribute('class', "h3__tag h3_Aaa_ h5_abc")
 
             console.log(heading);
+
+            console.log(heading.classList);  //  give all the classes DOMTokenList(3) ['h3__tag', 'h3_Aaa_', 'h5_abc', value: 'h3__tag h3_Aaa_ h5_abc']
             
+            heading.classList.add("say_my_name")  // new class list added
+
+            heading.classList.remove("h5_abc")  // remove this class
 
             // apped to document
+
+            
             document.querySelector('#root').appendChild(heading)
 
 
