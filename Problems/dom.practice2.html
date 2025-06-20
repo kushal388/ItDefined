@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        div{
+            height: 150px;
+            width :80%;
+            margin:auto;
+            border: 2px solid black;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <button  onclick="changeButton()"
+    style="padding: 10px; margin: 20px;border-radius: 10px ; color: white; background-color: blue">
+    Click me</button>
+    
+    <div id = "div1" class ="div_group">
+        Div -1
+
+    </div>
+
+    <div id = "div2" class= "div_group">
+        Div -2
+    </div>
+
+    <div>
+
+    </div>
+
+    <script>
+
+
+        // 1) getElementById
+
+        // document.getElementById("div1")
+        // .innerHTML = "<h3> Hey i am kushal </h3>"
+        // .innertext = " i am 26 year old"
+
+        // innerText will replace the innerHTML completely. So you can't have both applied at the same time on the same element.
+        
+        /*
+        let custom_div = document.getElementById("div1")
+        custom_div.innerHTML = `<h3> Hey i am kushal </h3> <p>  i am 25 yers old </p>`
+        custom_div.style.backgroundColor = "aliceblue"
+        */
+
+        // 2 ) getElementsByClassName
+
+        // let div_all = document.getElementsByClassName('div_group')
+        // for(let el of div_all){
+        //     el.innerHTML="<h3>this is example of getelemtsByClassNamw </h3>"
+        //     el.style.backgroundColor = "yellow"
+        // }
+
+        // 3) getElementsByTagName
+
+        // let div_all = document.getElementsByTagName('div')
+        // for(let el of div_all){
+        //     el.innerHTML="<h3>this is example of getelemtsByTagName</h3>"
+        //     el.style.backgroundColor = "yellow"
+        // }
+        
+        // 4)querySelector -> first elemet 
+
+        //  let style_div = document.querySelector('div')
+        // style_div.innerHTML = "<h3> Exaple for QuerySelector </h3>"
+        // style_div.style.backgroundColor = "green"
+
+
+        // 5) querySelectorAll (all -> for loop)
+
+        let div_all = document.querySelectorAll('div')
+        for(let el of div_all){
+            el.innerHTML="<h3>this is example of Query Selector ALL</h3>"
+            el.style.backgroundColor = "yellow"
+        }
+        
+
+        let changeButton = () =>{
+
+
+             let heading = document.createElement('button')
+
+
+            // let change = document.querySelector('div')
+            //  change.innerHTML = "<h3> Exaple for QuerySelector </h3>"
+            // change.style.backgroundColor = "green"
+
+
+            // let change = document.querySelectorAll('div')
+            // for(let el of change){
+            // el.innerHTML="<h3>this is example of Query Selector ALL</h3>"
+            // el.style.backgroundColor = "blue"
+            // }
+        
+        }
+
+    </script>
+
+
+</body>
+</html>

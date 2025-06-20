@@ -1,0 +1,51 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cache Storage Demo</title>
+</head>
+<body>
+  Cache Storage Example
+  <br>
+  <button onclick="saveToCache('user', 'Kushal')">Save to Cache</button>
+  <button onclick="getFromCache('user')">Get from Cache</button>
+  <button onclick="removeFromCache('user')">Remove from Cache</button>
+
+  <script>
+    const CACHE_NAME = 'my-cache-v1';
+
+    async function saveToCache(key, value) {
+      const cache = await caches.open(CACHE_NAME);
+      const response = new Response(value, {
+        headers: { 'Content-Type': 'text/plain' }
+      });
+      await cache.put(new Request(key), response);
+      alert(`Saved "${key}" = "${value}" in cache`);
+    }
+
+    async function getFromCache(key) {
+      const cache = await caches.open(CACHE_NAME);
+      const response = await cache.match(key);
+      if (response) {
+        const value = await response.text();
+        alert(`Retrieved "${key}" = "${value}" from cache`);
+      } else {
+        alert(`No value found for "${key}"`);
+      }
+    }
+
+    async function removeFromCache(key) {
+      const cache = await caches.open(CACHE_NAME);
+      const success = await cache.delete(key);
+      if (success) {
+        alert(`Removed "${key}" from cache`);
+      } else {
+        alert(`No cache entry found for "${key}"`);
+      }
+    }
+  </script>
+</body>
+</html>
