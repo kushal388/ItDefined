@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    .container{
+        height:500px;
+        width:400px;
+        text-align: center;
+        border:2px solid black;
+        margin:auto;
+        margin-top: 50px;
+
+    }
+    input{
+        padding:5px;
+        margin:10px 
+        
+    }
+    #submit{
+        display:block;
+        border:2px solid black;
+        background-color: rgb(6, 6, 140);
+        color:white;
+        text-align: center;
+        width:200px;
+        height:30px;
+        margin: auto;
+        margin-top: 50px;
+    }
+</style>
+
+
+
+</head>
+<body>
+    <div class="container">
+        <h2 style="color: darkcyan ;font-weight: bolder;">Looking for Developer</h2>
+       <label for="name">Name:</label>
+       <input type="text" id="name" name="name"><br>
+       <label for="age">Age:</label>
+       <input type="number" name="age" value=""><br>
+       <label for="">Role:
+           <label>
+           <input onclick="createsubmit()"  type="radio" name="role" id="role" value="Developer">
+           Developer</label>
+           <label>
+           <input type="radio" name="role" id="role" value="Developer">
+           Tester</label>
+       </label>
+        
+    </div>
+    
+    <script>
+       let count=0;
+       let createsubmit=()=>{
+        if(count == 0){
+        let submit=document.createElement("button")
+        submit.innerText="Submit";
+        submit.setAttribute("id","submit")
+        document.querySelector(".container").appendChild(submit);
+
+        count++;
+       }
+    }
+       
+    </script>
+
+
+
+    <div id="root">
+
+    </div>
+
+    <script>
+   
+
+    </script>
+    
+</body>
+</html>

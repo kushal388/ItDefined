@@ -1,3 +1,13 @@
+| Method      | Description                                |
+| ----------- | ------------------------------------------ |
+| `test()`    | Returns `true` if pattern matches          |
+| `exec()`    | Returns match object or `null`             |
+| `match()`   | Returns array of matches (used on strings) |
+| `replace()` | Replaces match with another string         |
+| `search()`  | Returns index of match or `-1`             |
+| `split()`   | Splits string using RegEx as delimiter     |
+
+
 | Flag | Meaning                          | Example     |
 | ---- | -------------------------------- | ----------- |
 | `g`  | Global search (find all matches) | `/a/g`      |

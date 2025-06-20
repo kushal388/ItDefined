@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Session Storage
+    <br>
+    <button onclick="saveToSession('name','Kushal')">Save to Session Storage</button>
+    <button onclick="alert(getFromSession('name'))">Get from Session Storage</button>
+    <button onclick="removeFromSession('name')">Removal from Session Storage</button>
+    
+
+
+    <script>
+
+        function saveToSession(key, value){
+            sessionStorage.setItem(key, value)
+        }
+
+        function getFromSession(key){
+            return sessionStorage.getItem(key)
+        }
+
+        function removeFromSession(key){
+            sessionStorage.removeItem(key)
+        }
+
+    </script>
+
+
+
+</body>
+</html>

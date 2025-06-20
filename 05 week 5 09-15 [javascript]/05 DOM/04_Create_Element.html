@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+    
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        div {
+            background-color: aliceblue;
+            border: 1px solid black;
+            width: 100%;
+            height: 100px;
+            margin :10px 5px
+        }
+    
+       
+    </style>
+
+
+</head>
+<body>
+
+    <input type="button"  onclick="createDiv()"
+    style="padding: 10px; margin: 20px;border-radius: 10px ; color: white; background-color: blue" value="Click me">
+    
+    
+    <div id="root">
+
+    </div>
+
+    <input id="name" type="text" value = "ok">
+
+
+    <!-- <script>
+
+        
+
+        let createDiv = () =>{
+            
+
+            // to create a new Div by createlement
+            let newDiv = document.createElement('div')
+
+            newDiv.innerHTML ="This  a new Div"
+            newDiv.style.padding = "10px" 
+            newDiv.style.margin = "10px"
+            newDiv.style.backgroundColor = "aliceblue"
+
+            // apped to document
+            document.body.appendChild(newDiv)
+
+           
+            
+        }
+
+
+    </script> -->
+
+
+ 
+    <script>
+
+        
+
+        let createDiv = () =>{
+            
+            // adding h2 to existing div named root
+            let heading = document.createElement('h3')
+            heading.innerHTML ="This  a new Div heading"
+            heading.style.padding = "10px"
+            heading.style.margin = "10px"
+            heading.style.backgroundColor = "aliceblue"
+
+            heading.setAttribute('id' , "h3_tag")
+            heading.setAttribute('class', "h3__tag h3_Aaa_ h5_abc")
+
+            console.log(heading);
+
+            console.log(heading.classList);  //  give all the classes DOMTokenList(3) ['h3__tag', 'h3_Aaa_', 'h5_abc', value: 'h3__tag h3_Aaa_ h5_abc']
+            
+            heading.classList.add("say_my_name")  // new class list added
+
+            heading.classList.remove("h5_abc")  // remove this class
+
+            // apped to document
+
+            
+            document.querySelector('#root').appendChild(heading)
+
+
+            document.querySelector('#name').value = "good"
+            
+        }
+
+
+     </script>
+
+
+
+
+</body>
+</html>

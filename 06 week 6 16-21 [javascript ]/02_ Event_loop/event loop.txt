@@ -1,0 +1,19 @@
+┌────────────┐
+│  Timers    │     → setTimeout, setInterval
+├────────────┤
+│  Pending   │     → I/O callbacks (deferred)
+│ Callbacks  │
+├────────────┤
+│  Idle,     │     → internal use (libuv)
+│  Prepare   │
+├────────────┤
+│   Poll     │     → I/O events
+├────────────┤
+│   Check    │     → setImmediate
+├────────────┤
+│   Close    │     → socket/stream .close() events
+│ Callbacks  │
+└────────────┘
+
+🔁 Between every phase:
+- 🧩 Microtasks: process.nextTick() → then Promises

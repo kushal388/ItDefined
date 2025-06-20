@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        .green_group{
+            background-color: aliceblue;
+            border: 1px solid black;
+            width: 100%;
+            height: 100px;
+            margin :10px 5px
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <button  onclick="changeDivStyle()"
+    style="padding: 10px; margin: 20px;border-radius: 10px ; color: white; background-color: blue">
+    Click me</button>
+    
+    <div id="first_div" class="green_group">
+
+    </div>
+    <div id="second_div" class="green_group">
+
+    </div>
+
+
+    <!-- <script>
+        
+        // getElementById
+
+
+        let changeDivStyle = () => {
+            let box2 = document.getElementById('second_div')
+                    box2.innerHTML  = "<p>How is you day!<p>"
+                    box2.style.backgroundColor = "red"
+
+        }
+        
+        document.getElementById('first_div').innerHTML = "Good day Kushal!!"
+        document.getElementById('first_div').innerHTML = "<h3>Good day Kushal!!</h3>"  // in inner html we cna give with elements
+
+
+        // document.getElementById('first_div').innerText = "Good day Rahulll!!"
+
+
+        let box2 = document.getElementById('second_div')
+        box2.innerHTML  = "<p>How are you <p>"
+        box2.style.backgroundColor = "yellow"
+
+    </script> -->
+
+    <script>
+
+        // getElementsByclassName
+
+        // getElementsByClassName() returns an HTMLCollection (like an array, not a single element).
+        // So div_all.innerText and div_all.style will not work, because you're trying to apply those on a collection directly
+
+        // it wil give error if we applu like above for getElemtsbyID
+
+
+      let div_all = document.getElementsByClassName('green_group')
+
+        // for (let i = 0; i < div_all.length; i++) {
+        //     div_all[i].innerHTML = "<p>How are you</p>";
+        //     div_all[i].style.backgroundColor = "yellow";
+        // }
+
+        // using for of
+        for( let el of div_all){
+            el.innerHTML = " <h4>How do you do!</h4>"
+        }
+
+
+        let changeDivStyle = () => {
+
+            
+            let change_div = document.getElementsByClassName('green_group')
+
+            for(let el2  of change_div){
+                el2.innerHTML = "<h4> What your Name!!"
+                el2.style.backgroundColor = "red"
+            }
+                    
+        }
+
+    </script>
+</body>
+</html>

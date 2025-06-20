@@ -42,7 +42,9 @@ let rev2 =''
 
 for(let i= word.length-1 ; i>=0 ;i--){
     rev2+=word[i]
-
+    // console.log(rev2);
+    
+    // to add spaces 
     if(i!==0){
         rev2+= ' '
     }
