@@ -72,3 +72,52 @@ async function promiseconsumption() {
 
 promiseconsumption().then(data => console.log(data))                   // [ 'Hello1', 'Hello2', 'Hello3', 'Hello4' ]
                     .catch(res => console.log(res))         // Hello4 => if i reject in P4
+
+
+*/
+
+
+let p1 = new Promise((resolve, reject)=>{
+    setTimeout(()=> 
+        resolve("Hello1"),1500)
+})
+let p2 = new Promise((resolve, reject)=>{
+    setTimeout(()=> 
+        resolve("Hello2"),500)
+})
+let p3 = new Promise((resolve, reject)=>{
+    setTimeout(()=> 
+        resolve("Hello3"),2500)
+})
+let p4 = new Promise((resolve, reject)=>{
+    setTimeout(()=> 
+        reject("Hello4"),3500)
+   
+    
+})
+
+// async function executePromise() {
+
+//     try{
+//         let response1 = await Promise.all([p1,p2,p3,p4])
+//         return response1
+//     }
+//     catch(error){
+//         return error
+//     }
+    
+// }
+
+// executePromise().then(console.log).catch(console.error);
+
+
+async function executePromise() {
+    try {
+        let response1 = await Promise.all([p1, p2, p3, p4]);
+        console.log(" Final Result:", response1);
+    } catch (error) {
+        console.log(" Error:", error);
+    }
+}
+
+executePromise();
