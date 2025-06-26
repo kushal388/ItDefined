@@ -1,0 +1,415 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .nav-link {
+            color: black !important;
+        }
+
+        
+        /* #work img :hover {
+            transition: transform 0.4s ease-in-out;
+            }
+
+        #work img:hover {
+            transform: scale(1.05);
+            }  */
+
+        .work-img-wrapper {
+            overflow: hidden;
+            border-radius: 10px; 
+            }
+
+          
+            .work-img-wrapper img {
+            transition: transform 0.4s ease-in-out;
+            display: block;
+            width: 100%; 
+            }
+
+            .work-img-wrapper img:hover {
+            transform: scale(1.1);
+            }
+         
+
+            #contact input,
+            #contact textarea {
+                border: 1px solid #333;
+                border-radius: 8px;
+                padding: 10px;
+            }
+
+            
+
+            */
+
+            
+
+</style>
+
+</head>
+  <body>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    
+
+  
+
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top" >
+  <div class="container-fluid" style="padding: 0 200px;">
+    <a class="navbar-brand" href="#">Kushal</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+  <ul class="nav  nav-underline ms-auto d-flex gap-5">
+    
+    <li class="nav-item ">
+      <a class="nav-link " aria-current="page" href="#home">Home</a>
+    </li>
+    <li class="nav-item ">
+      <a class="nav-link" href="#about" >About</a>
+    </li>
+    <li class="nav-item ">
+      <a class="nav-link" href="#skills">Skills</a>
+    </li>
+    <li class="nav-item ">
+      <a class="nav-link" href="#work">works</a>
+    </li>
+    <li class="nav-item ">
+      <a class="nav-link" href="#contact">Contact</a>
+    </li>
+  </ul>
+
+</div>
+
+    </div>
+  </div>
+</nav>
+
+<!-- // Home  page -->
+<section  id="home" style="padding-top: 150px;  ">
+  <div class="container d-flex align-items-center justify-content-between flex-wrap" style="padding: 0 100px;">
+    
+    <!-- Left_Text  -->
+    <div class="left-text" style="max-width: 500px;">
+      <h1 class="fw-bold display-4">Hi,<br> I'm <span style="color:#3A7BFF">Kushal</span><br> Web Designer</h1>
+      <button class="btn btn-primary mt-3 px-4 py-2 fw-semibold">Contact</button>
+      
+      <!-- Social Icons -->
+      <div class="mt-5 d-flex gap-3">
+        <i class="bi bi-linkedin fs-4"></i>
+        <i class="bi bi-behance fs-4"></i>
+        <i class="bi bi-github fs-4"></i>
+      </div>
+    </div>
+
+    <!-- Right   -->
+    <div class="img-wrapper position-relative p-4" style="background-color:hsl(220, 100%, 61%); border-radius: 60% / 40%; width: 300px; height: 300px;">
+      <img src="Pi7_Passport_Photo.jpeg" class="img-fluid rounded-circle" alt="My profile photo" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+
+  </div>
+</section>
+
+<!-- /////////////////////// -->
+<!-- about -->
+
+
+    <!-- <div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="..." class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+    <!-- <section class="about section " id="about">
+                <h2 class="section-title">About</h2>
+
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="Pi7_Passport_Photo.jpeg" alt="">
+                    </div>
+                    
+                    <div>
+                        <h2 class="about__subtitle">I'am kushal</h2>
+                        <p class="about__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate cum expedita quo culpa tempora, assumenda, quis fugiat ut voluptates soluta, aut earum nemo recusandae cumque perferendis! Recusandae alias accusamus atque.</p>           
+                    </div>                                   
+                </div>
+            </section> -->
+
+
+          <!-- <section class="about section " id="about" style="padding: 0 20%;">
+                <h2 class="section-title">About</h2>
+
+
+                <div class="card2 w-100 p-3" style=" display: flex; flex-direction: row; height:420px;">
+                    <img src="Pi7_Passport_Photo.jpeg" class="card-img-top" alt="img_1" style="width:20%">
+            
+                    <div>
+                            <h2 class="about__subtitle">I'am kushal</h2>
+                            <p class="about__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate cum expedita quo culpa tempora, assumenda, quis fugiat ut voluptates soluta, aut earum nemo recusandae cumque perferendis! Recusandae alias accusamus atque.</p>           
+                        </div> 
+          
+                </div>
+
+
+                
+            </section> -->
+
+        <section class="about section text-center" id="about" style="padding-top: 150px; ">
+        <h2 class="section-title fw-bold mb-5" style="color: hsl(220, 100%, 61%); border-bottom: 3px solid hsl(220, 100%, 61%); display: inline-block;">
+            About
+        </h2>
+
+        <!-- row -->
+        <div class="row justify-content-center align-items-center">
+            
+            <!-- Image -->
+            <div class="col-md-4 text-center">
+                <img src="Pi7_Passport_Photo.jpeg" alt="img_1" class="img-fluid rounded" style="width: 250px; height: auto; border-radius: 8px;">
+            </div>
+
+            <!-- Text -->
+            <div class="col-md-6 text-start text-center text-align">
+                <h3 class="fw-bold mb-3">I'm Kushal</h3>
+                <p style="max-width: auto; text-align: justify;">
+                    Working as a Senior System Engineer with 3 years of experience building and maintaining web applications using React, HTML, CSS, and JavaScript. Skilled in developing user interfaces and implementing features that enhance user experience . Seeking opportunities to apply technical expertise and drive innovation in a collaborative environment.
+                </p>
+            </div>
+            
+        </div>
+        </section>
+
+
+        <!-- about end -->
+
+
+        <!-- // skils -->
+        <section id="skills"  style="padding-top: 120px;" >
+            <div class="container">
+
+                <div class="text-center">
+                    <h2 class="fw-bold mb-5 d-inline-block" style="color: #3A7BFF; border-bottom: 3px solid #3A7BFF;">
+                        Skills
+                    </h2>
+                </div>
+
+
+                
+
+                
+                <div class="row align-items-center justify-content-center">
+
+                
+                <div class="col-md-6 mb-4">
+                    <h3 class="fw-bold">Professional Skills</h3>
+                    <p style="max-width: auto; text-align: justify;">
+                      Senior System Engineer with 3 years of experience building and maintaining responsive web applications using the MERN stack (MongoDB, Express.js, React.js, Node.js) along with core web technologies like HTML, CSS, and JavaScript. Proven ability to develop intuitive user interfaces and implement features that enhance performance, usability, and user experience. Skilled in designing RESTful APIs, managing application state, and integrating frontend and backend components. Seeking opportunities to contribute full-stack expertise, solve real-world problems, and grow in a collaborative, innovative environment
+                     </p>
+
+                    <!-- Skill 1 -->
+                    <div class="bg-white shadow-lg p-3 rounded mb-3">
+                    <div class="d-flex justify-content-between align-items-center fw-bold mb-1">
+                        <div><img src="https://cdn-icons-png.flaticon.com/512/732/732212.png"  width="24" class="me-2" >HTML5</div>
+                        <img src="" alt="">
+                        <div>95%</div>
+                    </div>
+                    <div class="progress" style="height: 5px;">
+                        <div class="progress-bar bg-primary" style="width: 95%;"></div>
+                    </div>
+                    </div>
+
+                    <!-- Skill 2 -->
+                    <div class="bg-white shadow p-3 rounded mb-3">
+                    <div class="d-flex justify-content-between align-items-center fw-bold mb-1">
+                        <div><img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" width="24" class="me-2">CSS3</div>
+                        <div>85%</div>
+                    </div>
+                    <div class="progress" style="height: 5px;">
+                        <div class="progress-bar bg-primary" style="width: 85%;"></div>
+                    </div>
+                    </div>
+
+                    <!-- Skill 3 -->
+                    <div class="bg-white shadow p-3 rounded mb-3">
+                    <div class="d-flex justify-content-between align-items-center fw-bold mb-1">
+                        <div><img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" width="24" class="me-2">JavaScript</div>
+                        <div>65%</div>
+                    </div>
+                    <div class="progress" style="height: 5px;">
+                        <div class="progress-bar bg-primary" style="width: 65%;"></div>
+                    </div>
+                    </div>
+
+                    <!-- Skill 4 -->
+                    <div class="bg-white shadow p-3 rounded mb-3">
+                    <div class="d-flex justify-content-between align-items-center fw-bold mb-1">
+                        <div><img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" width="24" class="me-2">UX/UI</div>
+                        <div>85%</div>
+                    </div>
+                    <div class="progress" style="height: 5px;">
+                        <div class="progress-bar bg-primary" style="width: 85%;"></div>
+                    </div>
+                    </div>
+                </div>
+
+
+                
+                <!-- Right Column: Image -->
+                <div class="col-md-5 text-center">
+                    <img src="work3.jpg" class="img-fluid rounded" alt="Skills Image" style="max-height: 400px;">
+                </div>
+
+                </div>
+            </div>
+</section>
+
+
+<!-- // work -->
+
+
+<section id="work" style="padding-top: 100px;">
+  <div class="container">
+
+    <!-- Section Heading -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold d-inline-block" style="color: #3A7BFF; border-bottom: 3px solid #3A7BFF;">
+        Work
+      </h2>
+    </div>
+
+    <!-- Image Grid -->
+    <div class="row g-4 justify-content-center">
+
+
+
+
+    <div class="col-md-4 col-sm-6">
+        <div class="work-img-wrapper">
+            <img src="work1.jpg" class="img-fluid rounded shadow-sm" alt="Work 1">
+        </div>
+     </div>
+
+    <div class="col-md-4 col-sm-6">
+        <div class="work-img-wrapper">
+            <img src="work2.jpg" class="img-fluid rounded shadow-sm" alt="Work 1">
+        </div>
+    </div>
+
+    <div class="col-md-4 col-sm-6">
+        <div class="work-img-wrapper">
+            <img src="work3.jpg" class="img-fluid rounded shadow-sm" alt="Work 1">
+        </div>
+    </div>
+
+    <div class="col-md-4 col-sm-6">
+        <div class="work-img-wrapper">
+            <img src="work4.jpg" class="img-fluid rounded shadow-sm" alt="Work 1">
+        </div>
+    </div>
+
+    <div class="col-md-4 col-sm-6">
+        <div class="work-img-wrapper">
+            <img src="work5.jpg" class="img-fluid rounded shadow-sm" alt="Work 1">
+        </div>
+    </div>
+
+    <div class="col-md-4 col-sm-6">
+        <div class="work-img-wrapper">
+            <img src="work6.jpg" class="img-fluid rounded shadow-sm" alt="Work 1">
+        </div>
+    </div>
+         
+
+      <!-- Work Image 1 -->
+      <!-- <div class="col-md-4 col-sm-6">
+        <img src="work1.jpg" class="img-fluid rounded shadow-sm" alt="Work 1">
+        
+    </div> -->
+
+      
+
+    </div>
+  </div>
+</section>
+
+ <!-- contact -->
+<section id="contact" style="padding-top: 120px;">
+  <div class="container">
+
+  
+    <div class="text-center mb-5">
+      <h2 class="fw-bold d-inline-block" style="color: hsl(220, 100%, 61%); border-bottom: 3px solid hsl(220, 100%, 61%);">
+        Contact
+      </h2>
+    </div>
+
+    
+        <div class="mx-auto p-4  rounded " style="width: 360px; height: 499px;">
+        <form>
+            <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Name">
+            </div>
+            <div class="mb-3">
+            <input type="email" class="form-control" placeholder="Email">
+            </div>
+            <div class="mb-3">
+            <textarea class="form-control" rows="5" placeholder="Message" style="resize: both;"></textarea>
+            </div>
+            <div class="text-end">
+            <button type="submit" class="btn btn-primary fw-bold">Submit</button>
+            </div>
+        </form>
+        </div>
+
+   
+
+  </div>
+</section>
+
+
+<!-- // footer -->
+
+<footer class=" text-white py-4" style="background-color: hsl(224, 56%, 12%);">
+  <div class="container text-center">
+
+    <h3 class="fw-bold">Kushal</h3>
+
+    
+    <div class="my-3">
+      <a href="#" class="text-white mx-2 fs-5"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="text-white mx-2 fs-5"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="text-white mx-2 fs-5"><i class="fab fa-twitter"></i></a>
+    </div>
+
+    
+    <p class="mb-0 fw-semibold">
+      © Kushcode. All rights reserved
+    </p>
+  </div>
+</footer>
+
+
+   
+
+
+
+  </body>
+</html>

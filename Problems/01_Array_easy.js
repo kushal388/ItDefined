@@ -315,35 +315,50 @@ console.log(second);
 
 // Armstrong number // 0,153,370,371, 407 
 
-let num = 153
-let sum =0
-let temp = num
+// let num = 153
+// let sum =0
+// let temp = num
 
-while(temp >0){
-    y = temp % 10
-    // console.log("to get last digit ", temp , y);
+// while(temp >0){
+//     y = temp % 10
+//     // console.log("to get last digit ", temp , y);
     
-    sum += y**3
-    // console.log("sum is ", temp , sum);
+//     sum += y**3
+//     // console.log("sum is ", temp , sum);
     
-    temp = parseInt(temp/10)
+//     temp = parseInt(temp/10)
 
-    // console.log("remove last digit " ,temp);
+//     // console.log("remove last digit " ,temp);
     
+// }
+
+// console.log(num ,sum);
+// if(num == sum){
+//     console.log("Armstrong number")
+// }
+// else{
+//     console.log("not an Armstrong number");
+    
+// }
+
+let arr = [1,2,4,[3,4,5],[30,40,50],30 ,40]
+let res =[]
+// let arr = [[1,2,3],[3,4,6],[5,6,7]]
+
+for(let i= 0 ; i <arr.length; i++){
+     
+    res.push(arr[i])
+
+    console.log("i value",arr[i]);
+    console.log(Array.isArray(arr[i]))  
 }
 
-console.log(num ,sum);
-if(num == sum){
-    console.log("Armstrong number")
-}
-else{
-    console.log("not an Armstrong number");
+let num = "1234"
+
+for(let i=num.length-1; i>=0 ;i--){
+    console.log(num[i]);
     
 }
-
-
-
-
 
 
 
