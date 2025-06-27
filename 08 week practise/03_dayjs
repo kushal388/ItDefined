@@ -1,0 +1,194 @@
+// function myPromise(){
+//     let num =60
+
+//     return new Promise((resolve, reject)=> {
+//         if(num > 50){
+//             resolve("num is greater than 50")
+//         }
+//         else{
+//             reject("num is less than 50")
+//         }
+//     })
+// }
+
+// myPromise().then(data => console.log(data))
+//         .catch(error => console.log(error) )
+
+
+
+// function myPromise(num){
+//     return new Promise((resolve, reject)=>{
+//         if(num > 50){
+//             resolve(`num ${num} is greater than 50`)
+//         }
+//         else{
+//             reject(`num ${num} is lesser than 50`)
+//         }
+//     })
+// }
+
+// myPromise(60).then(data => console.log(data))
+//             .catch(error => console.log(error))
+
+
+// let num =60
+// let myPromise = new Promise((resolve , reject)=> {
+//     if(num > 50){
+//         resolve(`num ${num} is greater than 50`)
+//     }
+//     else{
+//         reject(`num ${num} is less than 50`)
+//     }
+// })
+
+// myPromise.then(data => console.log(data))
+//         .catch(error => console.log(error))
+
+
+// async 1
+/*
+let num =60
+let myPromise = new Promise((resolve , reject)=> {
+    if(num > 50){
+        resolve(`num ${num} is greater than 50`)
+    }
+    else{
+        reject(`num ${num} is less than 50`)
+    }
+})
+
+// myPromise.then(data => console.log(data))
+//         .catch(error => console.log(error))
+
+
+async  function myAsyncfunction(){
+    const result = await myPromise
+    console.log("inside async fucntion");
+    console.log(result);
+    
+}
+
+myAsyncfunction()
+
+*/
+
+
+/*
+
+Async with function
+
+
+function myPromise(num) {
+  return new Promise((resolve, reject) => {
+    if (num > 50) {
+      resolve(`num ${num} is greater than 50`);
+    } else {
+      reject(`num ${num} is lesser than 50`);
+    }
+  });
+}
+
+
+// async function myAsync(){
+//     const result = await myPromise(60)
+//     console.log(result);
+    
+// }
+
+// myAsync()
+
+
+// by try catch 
+
+async function  myAsync() {
+    try{
+        const result = await myPromise(40)
+        console.log(result);
+        
+    }
+    catch(error){
+        console.log(error);
+        
+    }
+    
+}
+
+
+myAsync()
+
+*/
+
+// fetch("https://jsonplaceholder.typicode.com/posts/1")
+//   .then(response => {
+//     // Response is a readable stream, so we convert it to JSON
+//     return response.json();
+//   })
+//   .then(data => {
+//     console.log("Data received from API:", data);
+//   })
+//   .catch(error => {
+//     console.error("Fetch failed:", error);
+//   });
+
+
+// fetch("https://jsonplaceholder.typicode.com/posts", {
+//   method: "POST",
+//   headers: {
+//     "Content-Type": "application/json"
+//   },
+//   body: JSON.stringify({
+//     title: "foo",
+//     body: "bar",
+//     userId: 1
+//   })
+// })
+// .then(response => response.json())
+// .then(data => console.log("Post successful:", data))
+// .catch(error => console.error("Post failed:", error));
+
+
+// function abc() {
+//   var x = 10;
+
+//    return function xyz() {
+//     var y = 5;
+//      console.log(x + y);
+//      x = 20;
+//  }
+// }
+// const func = abc();
+// func(); // First call
+// func(); // Second call
+
+
+
+// function callAPI(url) {
+//   return new Promise((resolve, reject) => {
+//     fetch(url)
+//       .then(response => {
+//         if (!response.ok) {
+//           reject("Failed to fetch");
+//         }
+//         return response.json();
+//       })
+//       .then(data => resolve(data))
+//       .catch(error => reject(error));
+//   });
+// }
+
+// // Call the function
+// callAPI("https://jsonplaceholder.typicode.com/posts/1")
+//   .then(data => console.log("Data:", data))
+//   .catch(error => console.log("Error:", error));
+
+function fetchProduct() {
+  return fetch("https://fakestoreapi.com/products/1")
+    .then(res => {
+      if (!res.ok) throw new Error("Failed");
+      return res.json();
+    });
+}
+
+fetchProduct()
+  .then(data => console.log("✅ Product:", data))
+  .catch(error => console.error("❌ Error:", error));

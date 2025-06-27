@@ -1,19 +1,19 @@
-let arr = [1,2,4,5,6,7,8]
+// let arr = [1,2,4,5,6,7,8]
 
-for(let i=1 ; i < arr.length +1 ; i++){
-    let isFound = false
+// for(let i=1 ; i < arr.length +1 ; i++){
+//     let isFound = false
 
-    for(let j =0 ; j < arr.length ; j++){
-        if(arr[j] === i){
-            isFound = true;
-            break
-        }
-    }
-    if(!isFound){
-        console.log(i);
+//     for(let j =0 ; j < arr.length ; j++){
+//         if(arr[j] === i){
+//             isFound = true;
+//             break
+//         }
+//     }
+//     if(!isFound){
+//         console.log(i);
         
-    }
-}
+//     }
+// }
 
 
 
@@ -132,17 +132,120 @@ withdraw(4000)
 
     // check num
 
-function checknum(num){
-    return new Promise((resolve, reject) => {
-        if(num > 100){
-            resolve(" number is greter than 100")
-        }
-        else{
-            reject("num is less than 100")
-        }
-    } )
+// function checknum(num){
+//     return new Promise((resolve, reject) => {
+//         if(num > 100){
+//             resolve(" number is greter than 100")
+//         }
+//         else{
+//             reject("num is less than 100")
+//         }
+//     } )
+// }
+
+// checknum(90)
+//     .then(data => console.log(data))
+//     .catch(data =>console.log(data))
+
+
+// let number = 6
+
+// let p1 = new Promise((resove, reject) => {
+//     if(number >5){
+//         resove(`number ${number} is greater than 5`)
+//     }
+//     else{
+//         reject("number ${number} is less than 5")
+//     }
+// })
+// p1.then(data => console.log(data))
+// .catch(error => console.log(error))
+
+// console.log(typeof p1);
+
+
+
+// let arr = [1,2,3,[4,5,6],7,[5,6,7,8,9],8,9]  
+// let flattened = []
+
+
+// for(let i=0;i<arr.length ; i++){
+
+//     if(Array.isArray(arr[i])){
+//         for(let j=0 ; j<arr[i].length ; j++){
+//             flattened.push(arr[i][j])
+//         }
+//     }
+//     else{
+//         flattened.push(arr[i])
+//     }
+// }
+
+//    console.log(flattened);
+
+
+
+// let arr =[6,5,7,2,4,1,3]
+
+// let sum =0;
+// for(let i =0 ; i< arr.length ; i++){
+//     sum += arr[i]
+// }
+// console.log(sum);
+
+
+// for(let i=0 ; i< arr.length ;i++){
+//     for(let j=i+1; j< arr.length ;j++){
+//         if(arr[i] > arr[j]){
+//             let temp = arr[i]
+//             arr[i] = arr[j]
+//             arr[j] = temp
+//         }
+//     }
+// }
+
+// console.log(arr);
+
+
+// for(let i =0 ; i<=10 ; i++){
+//     console.log(`2 * ${i} = ${2*i}`);
+    
+// }
+    
+
+let name = "kushal"        
+for(let i = name.length-1 ; i>=0 ; i--){
+    console.log(name[i]);
+    
 }
 
-checknum(90)
-    .then(data => console.log(data))
-    .catch(data =>console.log(data))
+
+let num =4321
+let rev =0
+
+while(num > 0){
+    let digit = num % 10 
+    rev = rev * 10 + digit
+    num = Math.floor(num / 10)
+}
+
+console.log(rev);
+
+
+let arr = [1,2,4,[1,4,5,6],6,7,8,[2,5,7],2,4]
+
+let flattend = []
+
+for(let i=0 ; i< arr.length ; i++){
+
+    if(Array.isArray(arr[i])){
+        for(let j=0 ; j< arr[i].length ; j++){
+            flattend.push(arr[i][j])
+        }
+    }
+    else{
+        flattend.push(arr[i])
+    }
+}
+
+console.log(flattend);

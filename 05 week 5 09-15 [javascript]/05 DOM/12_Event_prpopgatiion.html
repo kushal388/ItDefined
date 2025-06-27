@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Propagation Demo</title>
+  <style>
+    .box {
+      padding: 30px;
+      border: 2px solid black;
+      margin: 10px;
+    }
+    #grandparent { background-color: lightblue; }
+    #parent { background-color: lightgreen; }
+    #child { background-color: lightcoral; }
+  </style>
+</head>
+<body>
+
+  <h2>Event Propagation (Capturing & Bubbling)</h2>
+
+  <div id="grandparent" class="box">
+    Grandparent
+    <div id="parent" class="box">
+      Parent
+      <div id="child" class="box">
+        Child
+      </div>
+    </div>
+  </div>
+
+  <!-- Event Propagation defines the order in which events are handled in the DOM tree when an event occurs -->
+
+  <!-- <script >
+
+        const grandparent = document.getElementById('grandparent');
+        const parent = document.getElementById('parent');
+        const child = document.getElementById('child');
+
+        // CAPTURING PHASE LISTENERS
+        grandparent.addEventListener(
+        'click',
+        () => console.log('🔵 Capturing: Grandparent'),
+        true
+        );
+        parent.addEventListener(
+        'click',
+        () => console.log('🔵 Capturing: Parent'),
+        true
+        );
+        child.addEventListener(
+        'click',
+        () => console.log('🔵 Capturing: Child'),
+        true
+        );
+
+        // BUBBLING PHASE LISTENERS
+        grandparent.addEventListener(
+        'click',
+        () => console.log('🟢 Bubbling: Grandparent')
+        );
+        parent.addEventListener(
+        'click',
+        () => console.log('🟢 Bubbling: Parent')
+        );
+        child.addEventListener(
+        'click',
+        () => console.log('🟢 Bubbling: Child')
+        );
+
+  </script> -->
+
+
+  <!-- event stop propagation -->
+  <script>
+    const grandparent = document.getElementById('grandparent');
+const parent = document.getElementById('parent');
+const child = document.getElementById('child');
+
+// CAPTURING PHASE
+grandparent.addEventListener(
+  'click',
+  () => console.log('🔵 Capturing: Grandparent'),
+  true
+);
+parent.addEventListener(
+  'click',
+  () => console.log('🔵 Capturing: Parent'),
+  true
+);
+child.addEventListener(
+  'click',
+  (event) => {
+    console.log('🔵 Capturing: Child (with stopPropagation)');
+    event.stopPropagation(); // 🔥 stops further propagation
+  },
+  true
+);
+
+// BUBBLING PHASE
+grandparent.addEventListener(
+  'click',
+  () => console.log('🟢 Bubbling: Grandparent')
+);
+parent.addEventListener(
+  'click',
+  () => console.log('🟢 Bubbling: Parent')
+);
+child.addEventListener(
+  'click',
+  () => console.log('🟢 Bubbling: Child')
+);
+
+  </script>
+
+</body>
+</html>
