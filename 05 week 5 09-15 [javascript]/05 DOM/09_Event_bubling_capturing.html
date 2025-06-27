@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Bubbling vs Capturing</title>
+</head>
+<body>
+  <div id="grandparent" style="padding: 30px; background-color: lightblue;">
+    Grandparent
+    <div id="parent" style="padding: 30px; background-color: lightgreen;">
+      Parent
+      <div id="child" style="padding: 30px; background-color: lightcoral;">
+        Child
+      </div>
+    </div>
+  </div>
+
+  <script >
+
+    // bubling ==> child to grandparent  // child -> parent -> grandparent
+    /*
+    document.getElementById('grandparent').addEventListener('click', () => console.log("grandparent clicked (bubling)"))
+
+    document.getElementById('parent').addEventListener('click', () => console.log("parent clicked (bubling)"))
+
+    document.getElementById('child').addEventListener('click', () => console.log("child clicked (bubling)"))
+
+    */
+
+    // capturing ==> grandparent to child  by adding 3rd argumnet  "true" // grandparent  -> parent -> child
+
+    /*
+     document.getElementById('grandparent').addEventListener('click', () => console.log("grandparent clicked (capturing)"),true)
+
+    document.getElementById('parent').addEventListener('click', () => console.log("parent clicked (Capturing)"),true)
+
+    document.getElementById('child').addEventListener('click', () => console.log("child clicked (Capturing)"),true)
+    */
+
+
+    // suppose we have capturing for grandparent i.e true 
+    // remaing two behave by dfault behaviour bubling so child -> parent 
+    // so outcome wil be grandparent(true)-> child -> parent
+
+    document.getElementById('grandparent').addEventListener('click', () => console.log("grandparent clicked (capturing)"),true)
+
+    document.getElementById('parent').addEventListener('click', () => console.log("parent clicked (bubling)"))
+
+    document.getElementById('child').addEventListener('click', () => console.log("child clicked (bubling)"))
+
+ 
+
+
+  </script>
+</body>
+</html>
