@@ -1,0 +1,6 @@
+something in the new file
+ this is the new line
+ this is the new line
+ this is the new line
+ this is the new line
+ this is the new line
