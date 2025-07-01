@@ -90,7 +90,7 @@ child.addEventListener(
   'click',
   (event) => {
     console.log('🔵 Capturing: Child (with stopPropagation)');
-    event.stopPropagation(); // 🔥 stops further propagation
+    // event.stopPropagation(); // 🔥 stops further propagation
   },
   true
 );
@@ -98,7 +98,9 @@ child.addEventListener(
 // BUBBLING PHASE
 grandparent.addEventListener(
   'click',
-  () => console.log('🟢 Bubbling: Grandparent')
+  () =>{ console.log('🟢 Bubbling: Grandparent')
+  
+}
 );
 parent.addEventListener(
   'click',
@@ -108,6 +110,18 @@ child.addEventListener(
   'click',
   () => console.log('🟢 Bubbling: Child')
 );
+
+
+// checking adding stop prepation to bubling it works
+
+// child.addEventListener(
+//   'click',
+//   (event) => {
+//     console.log('🟢 Bubbling: Child (with stopPropagation)');
+//     event.stopPropagation(); // 🔥 stops further propagation
+//   },
+  
+// );
 
   </script>
 
