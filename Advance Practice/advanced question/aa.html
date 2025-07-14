@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="search" placeholder="Type to test debounce..." />
+
+<script>
+  function debounce(func, delay) {
+    let timeoutId;
+
+    return function (...args) {
+      console.log(`[${new Date().toLocaleTimeString()}] 🔁 clearTimeout called`);
+
+      clearTimeout(timeoutId);
+
+      console.log(`[${new Date().toLocaleTimeString()}] ⏳ setTimeout started`);
+
+      timeoutId = setTimeout(() => {
+        console.log(`[${new Date().toLocaleTimeString()}] ✅ Function executed with:`, args[0].target.value);
+        func.apply(this, args);
+      }, delay);
+    };
+  }
+
+  function search(event) {
+    // This is the actual function you want to debounce
+    console.log(`[${new Date().toLocaleTimeString()}] 🔍 Searching for:`, event.target.value);
+  }
+
+  const debouncedSearch = debounce(search, 2000); // 2 seconds delay
+
+  document.getElementById("search").addEventListener("input", debouncedSearch);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Get Data</h1>
+
+    <button onclick="getdetails()"> GET DETAILS</button>
+
+    <div id = "output">Output</div>
+
+
+
+    <script>
+
+        function getdetails(){
+
+            fetch("https://fakestoreapi.com/products/2")
+            .then( Response => {
+                if(!Response.ok){
+                    throw new Error("Failed tooo fetch the dataaaa!!!")
+                }else{
+                    return Response.json()
+                }
+            })
+            .then( data => {
+
+
+                    document.getElementById('output').innerHTML = `
+                            id : ${data.id} <br>
+                            title : ${data.title} <br>
+                            price : ${data.price}
+                        `;
+
+            })
+
+            .catch ( error => {
+
+                document.getElementById('output').innerHTML = ` <h2>  ${error.message} </h2> `
+            })
+
+
+            // .catch( error => console.log("error:" , error.message))
+        }
+
+
+
+    </script>
+    
+</body>
+
+</html>

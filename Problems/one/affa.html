@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FakeStore API Fetch</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    #result { margin-top: 20px; }
+  </style>
+</head>
+<body>
+
+  <h2>Fetch Product by ID (FakeStore API)</h2>
+
+  <input type="number" id="productId" placeholder="Enter product ID (1-20)" />
+  <button onclick="fetchProduct()">Get Product</button>
+
+  <div id="result"></div>
+
+  <script>
+    function fetchProduct() {
+      const id = document.getElementById("productId").value;
+
+      if (!id) {
+        alert("Please enter a product ID.");
+        return;
+      }
+
+      fetch(`https://fakestoreapi.com/products/${id}`)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error("Product not found");
+          }
+          return response.json();
+        })
+        .then(data => {
+          document.getElementById("result").innerHTML = `
+            <h3>${data.title}</h3>
+            <img src="${data.image}" width="150" />
+            <p><strong>Price:</strong> $${data.price}</p>
+            <p>${data.description}</p>
+          `;
+        })
+        .catch(error => {
+          document.getElementById("result").innerHTML = `<p style="color:red;">${error.message}</p>`;
+        });
+    }
+  </script>
+
+</body>
+</html>

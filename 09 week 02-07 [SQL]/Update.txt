@@ -1,0 +1,31 @@
+to update:
+
+  ==>  update test.users2 set user_name = "aksah" where email = 'aditi@example.com';
+
+if i dont give where it will update to all 
+
+   ==>     update test.users2 set user_name = "aksah"
+
+| user | user_name | email              | password  | created_at          |
++------+-----------+--------------------+-----------+---------------------+
+|    1 | Akash     | kushal@example.com | secure123 | 2025-07-03 07:00:10 |
+|    2 | Akash     | aditi@example.com  | aditi@123 | 2025-07-03 07:02:27 |
+|    3 | Akash     | rahul@example.com  | rahul@321 | 2025-07-03 07:02:27 |
++------+-----------+--------------------+-----------+---------------------+
+
+
+********* ALTER **************
+
+1)Alter table name  : alter table <TABLE_NAME> RENAME  TO <NEW_TABLE_NAME>;
+
+     ==> alter table users2 rename to itd_users;
+
+
+2) ADD COLUMN NAME : ALTER TABLE <TABLE_NAME>  ADD <COLUMN_NAME>
+
+    ==> alter table itd_users add Phone_number varchar(200)
+
+
+3) Constraints
+
+a) Auto_increment should be added to Primary key

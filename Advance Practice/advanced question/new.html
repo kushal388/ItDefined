@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="search" placeholder="Type to search..." />
+        <script>
+        function debounce(func, delay) {
+            let timeoutId;
+            return function (...args) {
+            clearTimeout(timeoutId); // Clear previous timer
+            timeoutId = setTimeout(() => {
+                // console.log(args);
+                func.apply(this, args); // Call after delay
+                // console.log(args);
+                
+                
+            }, delay);
+            };
+        }
+
+        const search = (e) => {
+            console.log("API call for search:", e.target.value);
+        };
+
+        const debouncedSearch = debounce(search, 500); // 500ms delay
+
+        document.getElementById("search").addEventListener("input", debouncedSearch);
+        </script>
+
+</body>
+</html>
