@@ -86,7 +86,7 @@ let Virat3 ={
     lastName : "Kohli"
 }
 
-
+    
  let output4 = student3.get_name.apply(scahin3, [50 , "Mumbai" ]) 
 console.log("output4 apply:", output4);                             // output4 apply: Sachin Tendukar  and his age is  50 ans lives in Mumbai
 

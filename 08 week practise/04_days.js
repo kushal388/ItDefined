@@ -112,7 +112,7 @@ myfetch3().then(data => console.log(data))
 
 /*
 // Async and await with .then and .cathc to display 
-// other wise we habe anothe rmethod have 2 async fucntion one for fetc and nother for try cathc block
+// other wise we habe anothe rmethod have 2 async fucntion one for fetc and another for try cathc block
 
 
 async  function myfetch4(){
@@ -170,3 +170,6 @@ async function main(){
 main()
 
 */
+
+
+      

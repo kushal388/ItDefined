@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <div id="spinner">🔄 Loading...</div>
+<div id="output"></div>
+
+<script>
+  function fakeFetch() {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        // Randomly succeed or fail
+        Math.random() > 0.5
+          ? resolve("✅ Data fetched successfully")
+          : reject("❌ Failed to fetch data");
+      }, 2000);
+    });
+  }
+
+  // Show spinner
+  document.getElementById("spinner").style.display = "block";
+
+  fakeFetch()
+    .then((data) => {
+      document.getElementById("output").innerText = data;
+    })
+    .catch((error) => {
+      document.getElementById("output").innerText = error;
+    })
+    .finally(() => {
+      // Hide spinner no matter what
+      document.getElementById("spinner").style.display = "none";
+    });
+</script>
+
+
+
+
+</body>
+</html>

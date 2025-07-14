@@ -151,5 +151,5 @@ Promise.race([p3,p2,p1]).then(res => console.log(res))      //Shop is closeD!! h
 
 
             
-    Promise.any([p1,p2,p3]).then(res => console.log(res))       // Shop is closeD!!
+Promise.any([p1,p2,p3]).then(res => console.log(res))       // Shop is closeD!!
                         .catch(msg => console.log(msg)) 

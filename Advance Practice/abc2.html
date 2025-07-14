@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="submitBtn">Submit</button>
+<p id="status"></p>
+
+<script>
+  const button = document.getElementById("submitBtn");
+  const status = document.getElementById("status");
+
+  function submitForm() {
+    button.disabled = true; // disable button (user can't click again)
+    status.innerText = "Submitting...";
+
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        Math.random() > 0.5
+          ? resolve("✅ Submitted successfully!")
+          : reject("❌ Submission failed!");
+      }, 2000);
+    });
+  }
+
+  button.addEventListener("click", () => {
+    submitForm()
+      .then((msg) => {
+        status.innerText = msg;
+      })
+      .catch((err) => {
+        status.innerText = err;
+      })
+      .finally(() => {
+        button.disabled = false; // ✅ cleanup task: enable button again
+        console.log("Cleanup done: Button re-enabled");
+      });
+  });
+</script>
+
+</body>
+</html>
