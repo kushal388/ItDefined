@@ -1,0 +1,13 @@
+
+
+document = collection of key value pairs  ==> {   ..........}   =>  inidivdual student details
+
+collection ==> colelction of one or more documents ==> {....}.{,.....},{......},{.....}  ==> collection students
+
+databsae ==> collection of one or more collections  ==> collection students , colelction teacher
+
+
+
+ORM  ==> Object Relational MApping  [sql,postgrese sql, rdms]
+
+oDM ==> Object DocumentMapping [no-sql,xasaandra n-rdms]

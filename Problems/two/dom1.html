@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="button"> ACTION </button>
+
+    <!-- <div></div> -->
+
+    <!-- <script>
+        document.getElementById("button").addEventListener("click", () => {
+
+            
+           let para =  document.createElement("p")
+
+           para.textContent ="this is new line created by dom"
+
+           document.querySelector("div").appendChild(para)
+
+        })
+    </script> -->
+    
+
+    
+    <script>
+
+        document.getElementById("button").addEventListener("click", ()=>{
+
+            let div = document.createElement("div")
+            div.setAttribute("id", "result_div")
+
+            let para = document.createElement("p")
+            
+            para.textContent ="this is new line created by dom"
+
+            div.appendChild(para)
+
+            div.setAttribute("style", "background-color: lightblue; padding: 10px; border: 1px solid black;");
+
+
+            document.body.appendChild(div)
+
+        })
+    </script>
+
+
+</body>
+</html>

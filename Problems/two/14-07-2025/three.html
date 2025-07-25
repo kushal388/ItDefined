@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="productID" placeholder="enter the product id">
+    <button onclick="fetchData()">Get Details</button>
+    <div id ="output"></div>
+
+
+    <!-- <script>
+
+    function fetchData(){
+
+        let id = document.getElementById("productID").value
+
+        fetch(`https://fakestoreapi.com/products/${id}`)
+        .then( response => response.json())
+
+        .then(data => {
+
+            document.getElementById("output").innerHTML = `
+
+                    <h2> ID is : ${data.id} </h2>
+                    <h2> title is : ${data.title} </h2>
+                    <h2> Price is : ${data.price} </h2>
+
+
+            `
+        })
+
+        .catch ( error =>  document.getElementById("output").innerHTML = `<h2>Error in fetching Data </h2>` )
+        // .catch(error => console.log("error while fetching:" , error))
+    
+    }
+
+
+
+    </script> -->
+
+    <!-- <script>
+
+        function fetchData(){
+            const id = document.getElementById("productID").value
+
+            fetch(`https://fakestoreapi.com/products/${id}`)
+            .then( response => {
+                if(!response.ok){
+                    throw new Error("something went wrong!!")
+                }
+                return response.json()
+            })
+            .then( data => {
+                document.getElementById("output").innerHTML = `
+
+                        <h3> ID  : ${data.id} </h3>
+                        <h4> Title : ${data.title} </h3>
+                        <h4> Price : ${data.price} </h4>
+
+
+                `
+            })
+            .catch ( error => {
+                            document.getElementById("output").innerHTML = `<h3>${error.message} <h4>`
+            })
+        }
+
+
+
+
+    </script> -->
+
+    <script>
+
+        async function fetchData(){
+
+            const id = document.getElementById('productID').value 
+
+
+            if (isNaN(id) || id < 1 || id > 20) {
+                output.innerHTML = `<h3 >Please enter a valid Product ID between 1 and 20.</h3>`;
+                return;
+                }
+
+            try{
+
+                const response =  await  fetch(`https://fakestoreapi.com/products/${id}`) 
+               
+                if(!response.ok){
+                    throw new Error("failed to fetch the data")
+                }
+                
+                const data = await response.json()
+
+                if(data){
+                    document.getElementById("output").innerHTML = `
+
+                             <h3> ID  : ${data.id} </h3>
+                            <h4> Title : ${data.title} </h3>
+                            <h4> Price : ${data.price} </h4>
+
+
+                    `
+                }
+            }
+
+            catch(error){
+
+                document.getElementById("output").innerHTML = `<h3> ${error.message} </h3>`
+            }
+
+        }
+    </script>
+
+</body>
+</html>

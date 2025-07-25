@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<input type="text" id="productID" placeholder="enter the product id">
+    <button onclick="getdetails()">Get Details</button>
+    <div id ="output"></div>
+
+
+    <script>
+
+        function getdetails(){
+
+            let id = document.getElementById("productID").value;
+
+           fetch("https://fakestoreapi.com/products/${id}")
+           .then( response => {
+                    if(!response.ok){
+                        throw new Error("failed to fetch details of Product!!!")
+                    }
+                    else{
+                        return response.json()
+                    }
+           })
+           .then ( data => {
+
+                    document.getElementById('output').innerHTML = ` 
+
+                        <h4> id : ${data.id} </h4>
+                         <h4> price : ${data.price} </h4>
+                          <h4> title : ${data.title} </h4>
+                    
+                    
+                    `
+
+           })
+           .catch( error => {
+
+                document.getElementById('output').innerHTML = ` <h4> ${error.message} </h4> `
+           })
+
+        }
+
+
+
+
+    </script> 
+
+    
+</body>
+</html>

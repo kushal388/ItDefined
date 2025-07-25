@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    local Storage
+
+    <br>
+    <button onClick = "saveTOLocal('name', 'kushal')">
+        Save to local storage
+    </button>
+    <button onClick="alert(getFromLocal('name'))">
+        Get from local storahe
+    </button>
+    <button onclick="removeFromLocal('name')">
+        remove from local storage
+    </button>
+
+    <script>
+        function saveTOLocal(key, value){
+            localStorage.setItem(key, value)
+            // sessionStorage.setItem(key, value)
+
+
+        }
+
+        function getFromLocal(key){
+            return localStorage.getItem(key)
+                // return sessionStorage.getItem(key)
+
+        }
+
+        function removeFromLocal(key){
+            localStorage.removeItem(key)
+            // sessionStorage.removeItem(key)
+        }
+    </script>
+    
+</body>
+</html>
