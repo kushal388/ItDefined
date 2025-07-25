@@ -1,0 +1,72 @@
+To handle multiple request we have to use ==> load balancer..  [ aws, gcp , amazon provide a service for laod balacning]
+
+crate multiple serve to handle request 
+and each hav ediffrent ip adress 
+but load balcner handles in between even load balncer havve some ip adresss
+
+
+
+Sub domain
+
+will always to be prefix of the domain 
+For example ==> https://materials.itdefined.org
+
+here materials is the sub domain   ==> no need to pay for it .....
+itdefined.org is the main domain ==> we need to pay for it.... for domain in general.....
+
+
+
+to check :
+let query = `INSERT INTO itd_users (user_name, email , password) VALUES (?, ?, ?)`;
+
+connection.query(query, [user_name, email, password], (err, results, fields) => {
+  if (err) {
+    callback(err.message);
+  } else {
+    callback("success");
+  }
+});
+
+
+login aPi:
+
+app.post('/login', (req, res) => {
+  const { email, password } = req.body;
+
+  const query = `SELECT * FROM itd_users WHERE email = ? AND password = ?`;
+
+  connection.query(query, [email, password], (err, results) => {
+    if (err) {
+      return res.status(500).send("Server error");
+    }
+
+    if (results.length > 0) {
+      res.send("Login successful");
+    } else {
+      res.status(401).send("Invalid email or password");
+    }
+  });
+});
+
+
+
+
+forget API :
+
+app.post('/forgot_password', (req, res) => {
+  const { email, newPassword } = req.body;
+
+  const query = `UPDATE itd_users SET password = ? WHERE email = ?`;
+
+  connection.query(query, [newPassword, email], (err, results) => {
+    if (err) {
+      return res.status(500).send("Server error");
+    }
+
+    if (results.affectedRows > 0) {
+      res.send("Password updated successfully");
+    } else {
+      res.status(404).send("User not found");
+    }
+  });
+});

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="input" type="text">
+    <button id="submit">ADD</button>
+
+
+    <ul id="list">
+        <li> to do list </li>
+    </ul>
+
+    <script>
+
+        document.getElementById("submit").addEventListener("click", (e) => {
+            e.preventDefault()
+
+            let data = document.getElementById("input").value
+
+            
+
+            let li = document.createElement("li")
+
+            li.textContent = data
+
+            document.querySelector("#list").appendChild(li)
+
+            document.getElementById("input").value = ""; 
+        })
+
+    </script>
+</body>
+</html>

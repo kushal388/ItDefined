@@ -1,0 +1,16 @@
+{
+  "name": "mysql2_tutorial",
+  "version": "1.0.0",
+  "description": "about my Sql connect",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kushal",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2",
+    "mysql2": "^3.14.2"
+  }
+}

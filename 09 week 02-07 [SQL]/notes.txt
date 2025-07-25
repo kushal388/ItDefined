@@ -1,0 +1,30 @@
+diffrence between rdbms and non rdbms 
+
+| 🔹 **Feature**        | **RDBMS**                                                                | **Non-RDBMS (NoSQL)**                                                                                     |
+| --------------------- | ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------- |
+| **1. Data Model**     | Tabular (Rows and Columns)                                               | Various: Document, Key-Value, Column, Graph                                                               |
+| **Schema**            | Fixed (predefined schema)                                                | Dynamic or schema-less                                                                                    |
+| **2. Examples**       | MySQL, PostgreSQL, Oracle, SQL Server                                    | MongoDB, Redis, Cassandra, CouchDB, Neo4j                                                                 |
+| **3. Scalability**    | Vertical scaling (add more power to a single server)                     | Horizontal scaling (add more servers)                                                                     |
+| **4. Query Language** | Structured Query Language (SQL)                                          | No standard; depends on DB (e.g., MongoDB uses JSON-like queries)                                         |
+| **5. Transactions**   | Supports ACID properties (Atomicity, Consistency, Isolation, Durability) | Some support ACID; many prioritize CAP (Consistency, Availability, Partition tolerance) depending on type |
+| **6. Use Cases**      | Banking, Enterprise apps, Structured data                                | Big Data, Real-time analytics, IoT, Social media, Content management                                      |
+| **7. Flexibility**    | Less flexible with unstructured or rapidly changing data                 | More flexible with unstructured and semi-structured data                                                  |
+
+
+type rdbms                                                      --  non R-dbms
+well structured tables                                          -- key value  pasirs
+Vertical scaling (add more power to a single server),	        --  Horizontal scaling (add more servers)
+ACID propeties                                                  -- CAP properties(Consistency Availability Partition tolerance)
+joins                                                           -- no joins
+Banking, Enterprise                                             --  Social medi, Real-time analutics , Content management
+mysql , Oracle, PostgreSQL                                      -- MongoDb, Cassandra ,Redis
+
+
+[DDL] Data-defiantion-language [coomand that defines modified the structur of DB ] ---> created , Delete, Truncate, Rename ,Drop
+[DML] Data-Manipulation-language [command that manuplate inside the table]    --> inner , update,Delete
+[DCL] Data-Command-language [ command that control access amd permissions]  --> Grant , revoke
+[TCL] Transactions-control -language [command managaes db Transactions] --> Rollback, savepoint sp1, Rollback TO
+
+
+SQL Constraints :  Primary key , Foreign Key , UNIQUE , NOTNULL , CHECK , DEFAULT , Auto_increment

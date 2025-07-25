@@ -1,0 +1,10 @@
+const express = require("express")
+const router = express.Router()
+// const app = express();  earlier we used this for better navigation we use router
+
+
+will  use app.js as main
+wil us customer admin to make route to app.js
+
+
+
